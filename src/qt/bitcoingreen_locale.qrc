@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/arena_bg.qm</file>
+        <file alias="ca">locale/arena_ca.qm</file>
+        <file alias="cs">locale/arena_cs.qm</file>
+        <file alias="da">locale/arena_da.qm</file>
+        <file alias="de">locale/arena_de.qm</file>
+        <file alias="en">locale/arena_en.qm</file>
+        <file alias="en_US">locale/arena_en_US.qm</file>
+        <file alias="es">locale/arena_es.qm</file>
+        <file alias="fi">locale/arena_fi.qm</file>
+        <file alias="fr_FR">locale/arena_fr_FR.qm</file>
+        <file alias="it">locale/arena_it.qm</file>
+        <file alias="ja">locale/arena_ja.qm</file>
+        <file alias="ko_KR">locale/arena_ko_KR.qm</file>
+        <file alias="nl">locale/arena_nl.qm</file>
+        <file alias="pl">locale/arena_pl.qm</file>
+        <file alias="pt">locale/arena_pt.qm</file>
+        <file alias="pt_BR">locale/arena_pt_BR.qm</file>
+        <file alias="ro_RO">locale/arena_ro_RO.qm</file>
+        <file alias="ru">locale/arena_ru.qm</file>
+        <file alias="sk">locale/arena_sk.qm</file>
+        <file alias="sv">locale/arena_sv.qm</file>
+        <file alias="tr">locale/arena_tr.qm</file>
+        <file alias="uk">locale/arena_uk.qm</file>
+        <file alias="zh_CN">locale/arena_zh_CN.qm</file>
+        <file alias="zh_TW">locale/arena_zh_TW.qm</file>
+    </qresource>
+</RCC>
