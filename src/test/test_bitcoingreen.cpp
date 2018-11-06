@@ -1,10 +1,10 @@
 // Copyright (c) 2011-2013 The Bitcoin Core developers
 // Copyright (c) 2017 The PIVX developers
-// Copyright (c) 2017-2018 The Bitcoin Green developers
+// Copyright (c) 2017-2018 The Arena developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#define BOOST_TEST_MODULE Bitcoin Green Test Suite
+#define BOOST_TEST_MODULE Arena Test Suite
 
 #include "main.h"
 #include "random.h"

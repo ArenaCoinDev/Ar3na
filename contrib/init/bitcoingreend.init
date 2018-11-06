@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#  arenad The Bitcoin Green core server.
+#  arenad The Arena core server.
 #
 #
 # chkconfig: 345 80 20

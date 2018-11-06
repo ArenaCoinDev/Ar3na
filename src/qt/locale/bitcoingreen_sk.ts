@@ -176,8 +176,8 @@
         <translation>Potvrďte šifrovanie peňaženky</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že šifrovanie peňaženky nemôže úplne ochrániť vaše AR3NA pred odcudzením škodlivým softvérom, ktorý infikuje váš počítač.</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že šifrovanie peňaženky nemôže úplne ochrániť vaše AR3NA pred odcudzením škodlivým softvérom, ktorý infikuje váš počítač.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -598,8 +598,8 @@
         <translation>Panel nástrojov Záložky</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>Send coins to a AR3NA address</source>
@@ -618,16 +618,16 @@
         <translation>Prezrieť masternody</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green Core</source>
-        <translation>O Bitcoin Green Core</translation>
+        <source>&amp;About Arena Core</source>
+        <translation>O Arena Core</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Green Core</source>
-        <translation>Zobraziť informácie o Bitcoin Green Core</translation>
+        <source>Show information about Arena Core</source>
+        <translation>Zobraziť informácie o Arena Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Green</source>
-        <translation>Zmeňte možnosti konfigurácie pre Bitcoin Green</translation>
+        <source>Modify configuration options for Arena</source>
+        <translation>Zmeňte možnosti konfigurácie pre Arena</translation>
     </message>
     <message>
         <source>Sign messages with your AR3NA addresses to prove you own them</source>
@@ -678,12 +678,12 @@
         <translation>Okno blockchain prehliadača</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Green Core help message to get a list with possible Bitcoin Green command-line options</source>
-        <translation>Zobraziť pomocnú správu programu Bitcoin Green Core a získajte zoznam možností príkazového riadka Bitcoin Green</translation>
+        <source>Show the Arena Core help message to get a list with possible Arena command-line options</source>
+        <translation>Zobraziť pomocnú správu programu Arena Core a získajte zoznam možností príkazového riadka Arena</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core client</source>
-        <translation>Bitcoin Green Core klient</translation>
+        <source>Arena Core client</source>
+        <translation>Arena Core klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -904,15 +904,15 @@ MultiSend: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1157,8 +1157,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     </context>
 <context>

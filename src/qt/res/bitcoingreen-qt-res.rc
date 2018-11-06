@@ -20,13 +20,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Arena"
-            VALUE "FileDescription",    "Bitcoin Green Core (OSS GUI client for Bitcoin Green)"
+            VALUE "FileDescription",    "Arena Core (OSS GUI client for Arena)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "arena-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "arena-qt.exe"
-            VALUE "ProductName",        "Bitcoin Green Core"
+            VALUE "ProductName",        "Arena Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

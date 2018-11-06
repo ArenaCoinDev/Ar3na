@@ -176,8 +176,8 @@
         <translation>Potvrdit zašifrování peněženky</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše AR3NAy před krádží, pokud je Váš počítač infikován malwarem.</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše AR3NAy před krádží, pokud je Váš počítač infikován malwarem.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -598,8 +598,8 @@
         <translation>Nástrojová lišta záložek</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>Send coins to a AR3NA address</source>
@@ -618,12 +618,12 @@
         <translation>Procházet masternody</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green Core</source>
-        <translation>&amp;O Bitcoin Green Core</translation>
+        <source>&amp;About Arena Core</source>
+        <translation>&amp;O Arena Core</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Green Core</source>
-        <translation>Zobraz informace o Bitcoin Green Core</translation>
+        <source>Show information about Arena Core</source>
+        <translation>Zobraz informace o Arena Core</translation>
     </message>
     <message>
         <source>Modify configuration options for AR3NA</source>
@@ -678,12 +678,12 @@
         <translation>Okno blokového průzkumníka</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Green Core help message to get a list with possible Bitcoin Green command-line options</source>
-        <translation>Zobrazit Bitcoin Green Core pomocnou zpráv pro získání seznamu možných parametrů Bitcoin Green pro příkazy do příkazové řádky</translation>
+        <source>Show the Arena Core help message to get a list with possible Arena command-line options</source>
+        <translation>Zobrazit Arena Core pomocnou zpráv pro získání seznamu možných parametrů Arena pro příkazy do příkazové řádky</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core client</source>
-        <translation>Bitcoin Green Core klient</translation>
+        <source>Arena Core client</source>
+        <translation>Arena Core klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1108,12 +1108,12 @@ MultiSend: %1</translation>
         <translation>verze</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
-        <source>About Bitcoin Green Core</source>
-        <translation>O Bitcoin Green Core</translation>
+        <source>About Arena Core</source>
+        <translation>O Arena Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1147,16 +1147,16 @@ MultiSend: %1</translation>
         <translation>Vítejte</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Green Core.</source>
-        <translation>Vítejte v Bitcoin Green Core.</translation>
+        <source>Welcome to Arena Core.</source>
+        <translation>Vítejte v Arena Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Green Core will store its data.</source>
-        <translation>Při prvním spuštění programu si můžete vybrat, kam bude Bitcoin Green Core ukládat svá data.</translation>
+        <source>As this is the first time the program is launched, you can choose where Arena Core will store its data.</source>
+        <translation>Při prvním spuštění programu si můžete vybrat, kam bude Arena Core ukládat svá data.</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core will download and store a copy of the Bitcoin Green block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Bitcoin Green Core stáhne a uloží kopii Bitcoin Green blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
+        <source>Arena Core will download and store a copy of the Arena block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Arena Core stáhne a uloží kopii Arena blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1167,8 +1167,8 @@ MultiSend: %1</translation>
         <translation>Použít vlastní složku pro data</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1469,12 +1469,12 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin Green after logging in to the system.</source>
-        <translation>Automaticky spustit Bitcoin Green po přihlášení do systému</translation>
+        <source>Automatically start Arena after logging in to the system.</source>
+        <translation>Automaticky spustit Arena po přihlášení do systému</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Green on system login</source>
-        <translation>&amp;Spusti Bitcoin Green při přihlášení do systému</translation>
+        <source>&amp;Start Arena on system login</source>
+        <translation>&amp;Spusti Arena při přihlášení do systému</translation>
     </message>
     <message>
         <source>Show Masternodes Tab</source>
@@ -2139,8 +2139,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     </context>
 <context>

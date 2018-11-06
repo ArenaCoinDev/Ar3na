@@ -164,8 +164,8 @@
         <translation>Потвърдете криптирането на портфейла</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green сега ще се затвори, за да довърши процеса на криптиране. Запомнете, че криптирането на вашия портфейл не може напълно да защити вашия AR3NA от това, да бъде откраднат от злонамерен софутуер, инфектирал вашия компютър.</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena сега ще се затвори, за да довърши процеса на криптиране. Запомнете, че криптирането на вашия портфейл не може напълно да защити вашия AR3NA от това, да бъде откраднат от злонамерен софутуер, инфектирал вашия компютър.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>

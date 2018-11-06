@@ -160,8 +160,8 @@
         <translation>Bekräfta plånboks krypering</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina AR3NAs från att bli stulna av skadeprogram som infekterat din dator.</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina AR3NAs från att bli stulna av skadeprogram som infekterat din dator.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -583,8 +583,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>flik vertygsrad</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Kärna</translation>
+        <source>Arena Core</source>
+        <translation>Arena Kärna</translation>
     </message>
     <message>
         <source>Send coins to a AR3NA address</source>
@@ -603,16 +603,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Utforska masternoder</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green Core</source>
-        <translation>Om Bitcoin Green Kärnan</translation>
+        <source>&amp;About Arena Core</source>
+        <translation>Om Arena Kärnan</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Green Core</source>
-        <translation>Visa information om Bitcoin Green Kärnan</translation>
+        <source>Show information about Arena Core</source>
+        <translation>Visa information om Arena Kärnan</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Green</source>
-        <translation>Ändra konfigurationsval för Bitcoin Green</translation>
+        <source>Modify configuration options for Arena</source>
+        <translation>Ändra konfigurationsval för Arena</translation>
     </message>
     <message>
         <source>Sign messages with your AR3NA addresses to prove you own them</source>
@@ -631,8 +631,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kryptera och avkryptera privata nycklar genom användning av lösenfras</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core client</source>
-        <translation>Bitcoin Green kärn klient</translation>
+        <source>Arena Core client</source>
+        <translation>Arena kärn klient</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -837,15 +837,15 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Kärna</translation>
+        <source>Arena Core</source>
+        <translation>Arena Kärna</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Kärna</translation>
+        <source>Arena Core</source>
+        <translation>Arena Kärna</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1170,8 +1170,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Kärna</translation>
+        <source>Arena Core</source>
+        <translation>Arena Kärna</translation>
     </message>
     </context>
 <context>

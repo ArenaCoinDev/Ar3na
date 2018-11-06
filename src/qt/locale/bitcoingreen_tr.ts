@@ -176,8 +176,8 @@
         <translation>cüzdan şifrelemesini onayla</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green şifreleme işlemini tamamlamak için şimdi kapanacaktır. Cüzdanınızı şifrelemenin, AR3NA'lerinizi bilgisayarınıza bulaşan kötücül yazılımlar tarafından çalınmasına tamamen engelleyemediğini unutmayın</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena şifreleme işlemini tamamlamak için şimdi kapanacaktır. Cüzdanınızı şifrelemenin, AR3NA'lerinizi bilgisayarınıza bulaşan kötücül yazılımlar tarafından çalınmasına tamamen engelleyemediğini unutmayın</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>

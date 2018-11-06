@@ -96,7 +96,7 @@ public:
 };
 
 /**
- * Bitcoin Green RPC command dispatcher.
+ * Arena RPC command dispatcher.
  */
 class CRPCTable
 {

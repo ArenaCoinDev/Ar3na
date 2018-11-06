@@ -10,7 +10,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between arena-cli and arenad)
- * of a given instance of the Bitcoin Green system.
+ * of a given instance of the Arena system.
  */
 class CBaseChainParams
 {

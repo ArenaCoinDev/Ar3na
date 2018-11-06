@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Bitcoin Green developers
+// Copyright (c) 2017-2018 The Arena developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -399,7 +399,7 @@ UniValue dumpwallet(const UniValue& params, bool fHelp)
     std::sort(vKeyBirth.begin(), vKeyBirth.end());
 
     // produce output
-    file << strprintf("# Wallet dump created by Bitcoin Green %s (%s)\n", CLIENT_BUILD, CLIENT_DATE);
+    file << strprintf("# Wallet dump created by Arena %s (%s)\n", CLIENT_BUILD, CLIENT_DATE);
     file << strprintf("# * Created on %s\n", EncodeDumpTime(GetTime()));
     file << strprintf("# * Best block at time of backup was %i (%s),\n", chainActive.Height(), chainActive.Tip()->GetBlockHash().ToString());
     file << strprintf("#   mined on %s\n", EncodeDumpTime(chainActive.Tip()->GetBlockTime()));

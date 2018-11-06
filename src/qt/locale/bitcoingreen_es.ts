@@ -176,8 +176,8 @@
         <translation>Confirme el cifrado del monedero</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green se cerrará para finalizar el proceso de cifrado. Recuerde que cifrar su monedero no garantiza que sus AR3NAs no sean robados mediante malware de su ordenador.</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena se cerrará para finalizar el proceso de cifrado. Recuerde que cifrar su monedero no garantiza que sus AR3NAs no sean robados mediante malware de su ordenador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -602,8 +602,8 @@
         <translation>Herramienta de pestañas</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Núcleo Bitcoin Green</translation>
+        <source>Arena Core</source>
+        <translation>Núcleo Arena</translation>
     </message>
     <message>
         <source>Send coins to a AR3NA address</source>
@@ -626,16 +626,16 @@
         <translation>Explorar nodos maestros</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green Core</source>
-        <translation>&amp;Sobre el núcleo de Bitcoin Green</translation>
+        <source>&amp;About Arena Core</source>
+        <translation>&amp;Sobre el núcleo de Arena</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Green Core</source>
-        <translation>Mostrar información sobre el núcleo de Bitcoin Green</translation>
+        <source>Show information about Arena Core</source>
+        <translation>Mostrar información sobre el núcleo de Arena</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Green</source>
-        <translation>Modificar las opciones de configuración de Bitcoin Green</translation>
+        <source>Modify configuration options for Arena</source>
+        <translation>Modificar las opciones de configuración de Arena</translation>
     </message>
     <message>
         <source>Sign messages with your AR3NA addresses to prove you own them</source>
@@ -686,12 +686,12 @@
         <translation>Ventana del explorador de bloques</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Green Core help message to get a list with possible Bitcoin Green command-line options</source>
-        <translation>Mostrar la ayuda de Bitcoin Green Core para obtener una lista de posibles opciones en línea de comandos</translation>
+        <source>Show the Arena Core help message to get a list with possible Arena command-line options</source>
+        <translation>Mostrar la ayuda de Arena Core para obtener una lista de posibles opciones en línea de comandos</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core client</source>
-        <translation>Cliente Bitcoin Green Core</translation>
+        <source>Arena Core client</source>
+        <translation>Cliente Arena Core</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1160,16 +1160,16 @@ MultiEnvío: %1</translation>
         <translation>versión</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Núcleo Bitcoin Green</translation>
+        <source>Arena Core</source>
+        <translation>Núcleo Arena</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Bitcoin Green Core</source>
-        <translation>Acerca de Bitcoin Green Core</translation>
+        <source>About Arena Core</source>
+        <translation>Acerca de Arena Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1215,16 +1215,16 @@ MultiEnvío: %1</translation>
         <translation>Bienvenido/a</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Green Core.</source>
-        <translation>Bienvenido/a a Bitcoin Green Core.</translation>
+        <source>Welcome to Arena Core.</source>
+        <translation>Bienvenido/a a Arena Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Green Core will store its data.</source>
-        <translation>Al ser la primera vez que se inicia el programa, usted puede elegir dónde guardará Bitcoin Green Core sus datos.</translation>
+        <source>As this is the first time the program is launched, you can choose where Arena Core will store its data.</source>
+        <translation>Al ser la primera vez que se inicia el programa, usted puede elegir dónde guardará Arena Core sus datos.</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core will download and store a copy of the Bitcoin Green block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Bitcoin Green Core descargará y guardará una copia de la cadena de bloques Bitcoin Green. Por lo menos %1GB de datos serán guardados en esta carpeta, y crecerá con el tiempo. El monedero también se guardará en esta carpeta.</translation>
+        <source>Arena Core will download and store a copy of the Arena block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Arena Core descargará y guardará una copia de la cadena de bloques Arena. Por lo menos %1GB de datos serán guardados en esta carpeta, y crecerá con el tiempo. El monedero también se guardará en esta carpeta.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1235,8 +1235,8 @@ MultiEnvío: %1</translation>
         <translation>Usar una carpeta de datos personalizada:</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Núcleo Bitcoin Green</translation>
+        <source>Arena Core</source>
+        <translation>Núcleo Arena</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1555,8 +1555,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Si deselecciona el gasto de cambio no confirmado, las entradas de una transacción&lt;br/&gt;no podrán ser usadas hasta que esa transacción tenga al menos una confirmación.&lt;br/&gt;Esto también afecta a cómo se calcula su balance actual.</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin Green client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente Bitcoin Green en el enrutador. Ésto sólo funciona si su enrutador soporta UPnP y esta función está activada.</translation>
+        <source>Automatically open the Arena client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente Arena en el enrutador. Ésto sólo funciona si su enrutador soporta UPnP y esta función está activada.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1575,12 +1575,12 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin Green after logging in to the system.</source>
-        <translation>Arrancar Bitcoin Green automáticamente después de identificarse en Windows.</translation>
+        <source>Automatically start Arena after logging in to the system.</source>
+        <translation>Arrancar Arena automáticamente después de identificarse en Windows.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Green on system login</source>
-        <translation>&amp;Arrancar Bitcoin Green al inicio del sistema</translation>
+        <source>&amp;Start Arena on system login</source>
+        <translation>&amp;Arrancar Arena al inicio del sistema</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1607,16 +1607,16 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>&amp;Red</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Green.</source>
-        <translation>El idioma de interface de usuario puede seleccionarse aquí. Este ajuste tomará efecto después de reiniciar Bitcoin Green.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Arena.</source>
+        <translation>El idioma de interface de usuario puede seleccionarse aquí. Este ajuste tomará efecto después de reiniciar Arena.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapear un puerto utilizando &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin Green network through a SOCKS5 proxy.</source>
-        <translation>Conectar a la red Bitcoin Green mediante un proxy SOCKS5.</translation>
+        <source>Connect to the Arena network through a SOCKS5 proxy.</source>
+        <translation>Conectar a la red Arena mediante un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1770,8 +1770,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Recompensa de participación o de nodo maestro que aún no ha madurado</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin Green network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Bitcoin Green después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Arena network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Arena después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Unconfirmed transactions to watch-only addresses</source>
@@ -2061,8 +2061,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Cadena de bloques</translation>
     </message>
     <message>
-        <source>Open the Bitcoin Green debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Abrir el fichero de depuración Bitcoin Green en el directorio actual de datos. Esto puede llevar unos segundos para ficheros de depuración grandes.</translation>
+        <source>Open the Arena debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Abrir el fichero de depuración Arena en el directorio actual de datos. Esto puede llevar unos segundos para ficheros de depuración grandes.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2229,8 +2229,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Fuera:</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin Green RPC console.</source>
-        <translation>Bienvenido a la consola RPC de Bitcoin Green.</translation>
+        <source>Welcome to the Arena RPC console.</source>
+        <translation>Bienvenido a la consola RPC de Arena.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2300,12 +2300,12 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Una etiqueta opcional a asociar con la nueva dirección de recepción.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin Green network.</source>
-        <translation>Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. Nota: El mensaje no se envía junto al pago por la red Bitcoin Green.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Arena network.</source>
+        <translation>Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. Nota: El mensaje no se envía junto al pago por la red Arena.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Bitcoin Green network.</source>
-        <translation>Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. &lt;br&gt;Nota: El mensaje no se envía junto al pago por la red Bitcoin Green.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Arena network.</source>
+        <translation>Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. &lt;br&gt;Nota: El mensaje no se envía junto al pago por la red Arena.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -2581,8 +2581,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Si la comisión personalizada se fija en 1000 uAR3NAs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uAR3NAs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uAR3NAs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Bitcoin Green transactions than the network can process.</source>
-        <translation>Pagar sólo la comisión mínima está bien mientras haya menos volumen de transacciones que espacio en los bloques.&lt;br/&gt;Pero tenga en cuenta que esto podría acabar en una transacción que nunca se confirme si hay más demanda de transacciones Bitcoin Green de las que la red puede procesar.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Arena transactions than the network can process.</source>
+        <translation>Pagar sólo la comisión mínima está bien mientras haya menos volumen de transacciones que espacio en los bloques.&lt;br/&gt;Pero tenga en cuenta que esto podría acabar en una transacción que nunca se confirme si hay más demanda de transacciones Arena de las que la red puede procesar.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -2816,8 +2816,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Mensaje:</translation>
     </message>
     <message>
-        <source>A message that was attached to the arena: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin Green network.</source>
-        <translation>Un mensaje adjunto al arena: En recurso web especificado será guardado junto a la transacción para su referencia. Nota: Este mensaje no se enviará por la red Bitcoin Green.</translation>
+        <source>A message that was attached to the arena: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Arena network.</source>
+        <translation>Un mensaje adjunto al arena: En recurso web especificado será guardado junto a la transacción para su referencia. Nota: Este mensaje no se enviará por la red Arena.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2843,8 +2843,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Green Core is shutting down...</source>
-        <translation>El programa Bitcoin Green se está cerrando...</translation>
+        <source>Arena Core is shutting down...</source>
+        <translation>El programa Arena se está cerrando...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2993,8 +2993,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Núcleo Bitcoin Green</translation>
+        <source>Arena Core</source>
+        <translation>Núcleo Arena</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -3013,8 +3013,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Los desarrolladores de PIVX Core</translation>
     </message>
     <message>
-        <source>The Bitcoin Green Core developers</source>
-        <translation>Los desarrolladores de Bitcoin Green Core</translation>
+        <source>The Arena Core developers</source>
+        <translation>Los desarrolladores de Arena Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -3571,8 +3571,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Escuchar únicamente a la tarjeta de red indicada para conexiones JSON-RPC. Use la notación [host]:puerto para IPv6. Esta opción puede ser especificada varias veces (por defecto: escuchar en todas las tarjetas de red)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin Green Core is probably already running.</source>
-        <translation>No se puede obtener un bloqueo sobre el directorio de datos %s. Bitcoin Green Core esta probablemente en ejecución.</translation>
+        <source>Cannot obtain a lock on data directory %s. Arena Core is probably already running.</source>
+        <translation>No se puede obtener un bloqueo sobre el directorio de datos %s. Arena Core esta probablemente en ejecución.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -3591,8 +3591,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Borrar todas las transacciones del monedero y solo recuperar partes de la cadena de bloque a traves de -rescan al inicio.</translation>
     </message>
     <message>
-        <source>Disable all Bitcoin Green specific functionality (Masternodes, SwiftTX, Budgeting) (0-1, default: %u)</source>
-        <translation>Desabilitar toda la funcionalidad especifica Bitcoin Green (Masternodes, SwiftTX, Budgeting) (0-1, predeterminado: %u)</translation>
+        <source>Disable all Arena specific functionality (Masternodes, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <translation>Desabilitar toda la funcionalidad especifica Arena (Masternodes, SwiftTX, Budgeting) (0-1, predeterminado: %u)</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
@@ -3736,7 +3736,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s "Bitcoin Green Alert" admin@foo.com
+for example: alertnotify=echo %%s | mail -s "Arena Alert" admin@foo.com
 </source>
         <translation>Para usar arenad, o la opción -server de arena-qt, debes definir un rpcpassword en el archivo de configuración:
 %s
@@ -3747,12 +3747,12 @@ rpcrpcpassword=%s
 El nombre de usuario y contraseña NO DEBEN ser los mismos.
 Si el archivo no existe, crearlo con permisos de solo lectura para el propietario.
 También es recomendado definir alertnotify de manera que seas notificado de problemas;
-por ejemplo: alertnotify=echo %%s | mail -s "Bitcoin Green Alert" admin@foo.com
+por ejemplo: alertnotify=echo %%s | mail -s "Arena Alert" admin@foo.com
 </translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Bitcoin Green Core is probably already running.</source>
-        <translation>Imposible conectar a %s en esta computadora. Es probable que Bitcoin Green Core ya este corriendo.</translation>
+        <source>Unable to bind to %s on this computer. Arena Core is probably already running.</source>
+        <translation>Imposible conectar a %s en esta computadora. Es probable que Arena Core ya este corriendo.</translation>
     </message>
     <message>
         <source>Unable to locate enough funds for this transaction that are not equal 10000 AR3NA.</source>
@@ -3771,8 +3771,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "Bitcoin Green Alert" admin@foo.com
         <translation>Advertencia: -paytxfee esta muy alta! Esta es la comisión de transacción que pagarás si envías una transacción.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Green Core will not work properly.</source>
-        <translation>Advertencia: Por favor verifique que la fecha y hora de su computadora sean correctas! Si su reloj esta fuera de hora Bitcoin Green Core no funcionará adecuadamente.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Arena Core will not work properly.</source>
+        <translation>Advertencia: Por favor verifique que la fecha y hora de su computadora sean correctas! Si su reloj esta fuera de hora Arena Core no funcionará adecuadamente.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -3915,8 +3915,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "Bitcoin Green Alert" admin@foo.com
         <translation>Copyright (C) 2015-%i The PIVX Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2017-%i The Bitcoin Green Core Developers</source>
-        <translation>Copyright (C) 2017-%i The Bitcoin Green Core Developers</translation>
+        <source>Copyright (C) 2017-%i The Arena Core Developers</source>
+        <translation>Copyright (C) 2017-%i The Arena Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -3987,8 +3987,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "Bitcoin Green Alert" admin@foo.com
         <translation>Error al cargar wallet.dat: Billetera dañada</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Green Core</source>
-        <translation>Error al cargar wallet.dat: La Billetera requiere una nueva versión del Núcleo Bitcoin Green</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Arena Core</source>
+        <translation>Error al cargar wallet.dat: La Billetera requiere una nueva versión del Núcleo Arena</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -4091,8 +4091,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "Bitcoin Green Alert" admin@foo.com
         <translation>Información</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Bitcoin Green Core is shutting down.</source>
-        <translation>La prueba de salud de inicialización ha fallado. Bitcoin Green Core se cerrará.</translation>
+        <source>Initialization sanity check failed. Arena Core is shutting down.</source>
+        <translation>La prueba de salud de inicialización ha fallado. Arena Core se cerrará.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -4663,8 +4663,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "Bitcoin Green Alert" admin@foo.com
         <translation>Monedero bloqueado.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Bitcoin Green Core to complete</source>
-        <translation>Monedero necesita ser reescrito: reinicie Bitcoin Green Core para completar</translation>
+        <source>Wallet needed to be rewritten: restart Arena Core to complete</source>
+        <translation>Monedero necesita ser reescrito: reinicie Arena Core para completar</translation>
     </message>
     <message>
         <source>Wallet options:</source>

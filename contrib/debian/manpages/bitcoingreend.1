@@ -6,9 +6,9 @@ arenad [options] <command> [params]
 .TP
 arenad [options] help <command> \- Get help for a command
 .SH DESCRIPTION
-This  manual page documents the arenad program. Bitcoin Green is a peer-to-peer digital currency. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network. Advantages:
+This  manual page documents the arenad program. Arena is a peer-to-peer digital currency. Peer-to-peer (P2P) means that there is no central authority to issue new money or keep track of transactions. Instead, these tasks are managed collectively by the nodes of the network. Advantages:
 
-Bitcoin Green can be sent easily through the Internet, without having to trust middlemen. Transactions are designed to be irreversible. Be safe from instability caused by fractional reserve banking and central banks. The limited inflation of the Bitcoin Green system’s money supply is distributed evenly (by CPU power) throughout the network, not monopolized by banks.
+Arena can be sent easily through the Internet, without having to trust middlemen. Transactions are designed to be irreversible. Be safe from instability caused by fractional reserve banking and central banks. The limited inflation of the Arena system’s money supply is distributed evenly (by CPU power) throughout the network, not monopolized by banks.
 
 .SH OPTIONS
 .TP
@@ -177,7 +177,7 @@ Returns a list of the last ['count'] transactions for 'account' \- for all accou
     "message"       : message associated with transaction (only for send).
     "to"            : message-to associated with transaction (only for send).
 
-    *note: requires bitcoin green 1.0.0.1 or later.
+    *note: requires arena 1.0.0.1 or later.
 .TP
 \fBmove <'fromaccount'> <'toaccount'> <'amount'> ['minconf=1'] ['comment']\fR
 Moves funds between accounts.
@@ -189,7 +189,7 @@ Sends amount from account's balance to 'bitgaddress'. This method will fail if t
 Sends amount from the server's available balance to 'bitgaddress'. amount is a real and is rounded to the nearest 0.01. Returns transaction id on success.
 .TP
 \fBstop\fR
-Stops the bitcoin green server.
+Stops the arena server.
 .TP
 \fBvalidateaddress 'bitgaddress'\fR
 Checks that 'bitgaddress' looks like a proper bitg address. Returns an object containing:

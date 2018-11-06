@@ -1,6 +1,6 @@
 (note: this is a temporary file, to be added-to by anybody, and moved to release-notes at release time)
 
-Bitcoin Green Core version *version* is now available from:
+Arena Core version *version* is now available from:
 
   <https://github.com/arena/arena/releases>
 
@@ -23,10 +23,10 @@ If you are running an older version, shut it down. Wait until it has completely 
 Compatibility
 ==============
 
-Bitcoin Green Core is extensively tested on multiple operating systems using
+Arena Core is extensively tested on multiple operating systems using
 Linux, macOS 10.10+, and Windows 7 and later.
 
-Bitcoin Green Core should also work on most other Unix-like systems but is not
+Arena Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 Notable Changes

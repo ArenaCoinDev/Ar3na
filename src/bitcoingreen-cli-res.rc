@@ -17,7 +17,7 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Arena"
-            VALUE "FileDescription",    "arena-cli (OSS RPC client for Bitcoin Green)"
+            VALUE "FileDescription",    "arena-cli (OSS RPC client for Arena)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "arena-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR

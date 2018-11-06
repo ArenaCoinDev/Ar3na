@@ -105,7 +105,7 @@ std::string to_internal(const std::string&);
 
 using namespace std;
 
-// Bitcoin Green only features
+// Arena only features
 // Masternode
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
@@ -227,7 +227,7 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "arena" is a composite category enabling all Bitcoin Green-related debug output
+            // "arena" is a composite category enabling all Arena-related debug output
             if (ptrCategory->count(string("arena"))) {
                 ptrCategory->insert(string("swifttx"));
                 ptrCategory->insert(string("masternode"));

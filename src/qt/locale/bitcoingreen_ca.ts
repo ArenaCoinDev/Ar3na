@@ -354,12 +354,12 @@
         <translation>A&amp;juda</translation>
     </message>
     <message>
-        <source>Bitcoin Green</source>
-        <translation>Bitcoin Green</translation>
+        <source>Arena</source>
+        <translation>Arena</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green</source>
-        <translation>&amp;Sobre Bitcoin Green</translation>
+        <source>&amp;About Arena</source>
+        <translation>&amp;Sobre Arena</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -552,12 +552,12 @@
         <translation>versió</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
-        <source>About Bitcoin Green Core</source>
-        <translation>Sobre Bitcoin Green Core</translation>
+        <source>About Arena Core</source>
+        <translation>Sobre Arena Core</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -575,12 +575,12 @@
         <translation>Benvingut</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Green Core.</source>
-        <translation>Benvingut a Bitcoin Green Core.</translation>
+        <source>Welcome to Arena Core.</source>
+        <translation>Benvingut a Arena Core.</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1101,8 +1101,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>Version %1</source>

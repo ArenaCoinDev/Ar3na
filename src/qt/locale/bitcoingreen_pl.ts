@@ -514,8 +514,8 @@
         <translation>&amp;Pomoc</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>&amp;Rdzeń Bitcoin Green</translation>
+        <source>Arena Core</source>
+        <translation>&amp;Rdzeń Arena</translation>
     </message>
     <message>
         <source>Send coins to a AR3NA address</source>
@@ -534,16 +534,16 @@
         <translation>Przeglądaj masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green Core</source>
+        <source>&amp;About Arena Core</source>
         <translation>&amp;O rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Green Core</source>
+        <source>Show information about Arena Core</source>
         <translation>Pokaż informacje o rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Green</source>
-        <translation>Modyfikuj opcje konfiguracji Bitcoin Green</translation>
+        <source>Modify configuration options for Arena</source>
+        <translation>Modyfikuj opcje konfiguracji Arena</translation>
     </message>
     <message>
         <source>Sign messages with your AR3NA addresses to prove you own them</source>
@@ -590,12 +590,12 @@
         <translation>Okno eksplorera bloków</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Green Core help message to get a list with possible Bitcoin Green command-line options</source>
-        <translation>Pokaż wiadomość pomocy rdzenia Bitcoin Green, aby dostać listę możliwych opcji Bitcoin Green command-line</translation>
+        <source>Show the Arena Core help message to get a list with possible Arena command-line options</source>
+        <translation>Pokaż wiadomość pomocy rdzenia Arena, aby dostać listę możliwych opcji Arena command-line</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core client</source>
-        <translation>Rdzeń Bitcoin Green klient</translation>
+        <source>Arena Core client</source>
+        <translation>Rdzeń Arena klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -904,8 +904,8 @@ MultiWysyłlka: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>&amp;Rdzeń Bitcoin Green</translation>
+        <source>Arena Core</source>
+        <translation>&amp;Rdzeń Arena</translation>
     </message>
     </context>
 <context>
@@ -919,8 +919,8 @@ MultiWysyłlka: %1</translation>
         <translation>Użyj niestandardowej ścieżki danych</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>&amp;Rdzeń Bitcoin Green</translation>
+        <source>Arena Core</source>
+        <translation>&amp;Rdzeń Arena</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1161,12 +1161,12 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>Zezwól na przychodzące połączenia</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin Green after logging in to the system.</source>
-        <translation>Automatycznie uruchom Bitcoin Green po zalogowaniu do systemu</translation>
+        <source>Automatically start Arena after logging in to the system.</source>
+        <translation>Automatycznie uruchom Arena po zalogowaniu do systemu</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Green on system login</source>
-        <translation>&amp;Uruchom Bitcoin Green podczas logowania do systemu</translation>
+        <source>&amp;Start Arena on system login</source>
+        <translation>&amp;Uruchom Arena podczas logowania do systemu</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1185,12 +1185,12 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>&amp;Sieć</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Green.</source>
-        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie Bitcoin Green</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Arena.</source>
+        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie Arena</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin Green network through a SOCKS5 proxy.</source>
-        <translation>Połącz z siecią Bitcoin Green poprzez SOCKS5 proxy.</translation>
+        <source>Connect to the Arena network through a SOCKS5 proxy.</source>
+        <translation>Połącz z siecią Arena poprzez SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1835,8 +1835,8 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>&amp;Rdzeń Bitcoin Green</translation>
+        <source>Arena Core</source>
+        <translation>&amp;Rdzeń Arena</translation>
     </message>
     </context>
 <context>

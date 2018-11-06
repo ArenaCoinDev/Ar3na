@@ -30,7 +30,7 @@ QT_TRANSLATE_NOOP("arena-core", ""
 "notation for IPv6. This option can be specified multiple times (default: "
 "bind to all interfaces)"),
 QT_TRANSLATE_NOOP("arena-core", ""
-"Cannot obtain a lock on data directory %s. Bitcoin Green Core is probably already "
+"Cannot obtain a lock on data directory %s. Arena Core is probably already "
 "running."),
 QT_TRANSLATE_NOOP("arena-core", ""
 "Change automatic finalized budget voting behavior. mode=auto: Vote for only "
@@ -45,7 +45,7 @@ QT_TRANSLATE_NOOP("arena-core", ""
 "Delete all wallet transactions and only recover those parts of the "
 "blockchain through -rescan on startup"),
 QT_TRANSLATE_NOOP("arena-core", ""
-"Disable all Bitcoin Green specific functionality (Masternodes, SwiftTX, "
+"Disable all Arena specific functionality (Masternodes, SwiftTX, "
 "Budgeting) (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("arena-core", ""
 "Distributed under the MIT software license, see the accompanying file "
@@ -163,9 +163,9 @@ QT_TRANSLATE_NOOP("arena-core", ""
 "If the file does not exist, create it with owner-readable-only file "
 "permissions.\n"
 "It is also recommended to set alertnotify so you are notified of problems;\n"
-"for example: alertnotify=echo %%s | mail -s \"Bitcoin Green Alert\" admin@foo.com\n"),
+"for example: alertnotify=echo %%s | mail -s \"Arena Alert\" admin@foo.com\n"),
 QT_TRANSLATE_NOOP("arena-core", ""
-"Unable to bind to %s on this computer. Bitcoin Green Core is probably already running."),
+"Unable to bind to %s on this computer. Arena Core is probably already running."),
 QT_TRANSLATE_NOOP("arena-core", ""
 "Unable to locate enough funds for this transaction that are not equal 1000 "
 "AR3NA."),
@@ -180,7 +180,7 @@ QT_TRANSLATE_NOOP("arena-core", ""
 "pay if you send a transaction."),
 QT_TRANSLATE_NOOP("arena-core", ""
 "Warning: Please check that your computer's date and time are correct! If "
-"your clock is wrong Bitcoin Green Core will not work properly."),
+"your clock is wrong Arena Core will not work properly."),
 QT_TRANSLATE_NOOP("arena-core", ""
 "Warning: The network does not appear to fully agree! Some miners appear to "
 "be experiencing issues."),
@@ -234,7 +234,7 @@ QT_TRANSLATE_NOOP("arena-core", "Connection options:"),
 QT_TRANSLATE_NOOP("arena-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
 QT_TRANSLATE_NOOP("arena-core", "Copyright (C) 2014-%i The Dash Core Developers"),
 QT_TRANSLATE_NOOP("arena-core", "Copyright (C) 2015-%i The PIVX Core Developers"),
-QT_TRANSLATE_NOOP("arena-core", "Copyright (C) 2017-%i The Bitcoin Green Core Developers"),
+QT_TRANSLATE_NOOP("arena-core", "Copyright (C) 2017-%i The Arena Core Developers"),
 QT_TRANSLATE_NOOP("arena-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("arena-core", "Could not parse -rpcbind value %s as network address"),
 QT_TRANSLATE_NOOP("arena-core", "Could not parse masternode.conf"),
@@ -263,7 +263,7 @@ QT_TRANSLATE_NOOP("arena-core", "Error initializing wallet database environment 
 QT_TRANSLATE_NOOP("arena-core", "Error loading block database"),
 QT_TRANSLATE_NOOP("arena-core", "Error loading wallet.dat"),
 QT_TRANSLATE_NOOP("arena-core", "Error loading wallet.dat: Wallet corrupted"),
-QT_TRANSLATE_NOOP("arena-core", "Error loading wallet.dat: Wallet requires newer version of Bitcoin Green Core"),
+QT_TRANSLATE_NOOP("arena-core", "Error loading wallet.dat: Wallet requires newer version of Arena Core"),
 QT_TRANSLATE_NOOP("arena-core", "Error opening block database"),
 QT_TRANSLATE_NOOP("arena-core", "Error reading from database, shutting down."),
 QT_TRANSLATE_NOOP("arena-core", "Error recovering public key."),
@@ -291,7 +291,7 @@ QT_TRANSLATE_NOOP("arena-core", "Incompatible mode."),
 QT_TRANSLATE_NOOP("arena-core", "Incompatible version."),
 QT_TRANSLATE_NOOP("arena-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
 QT_TRANSLATE_NOOP("arena-core", "Information"),
-QT_TRANSLATE_NOOP("arena-core", "Initialization sanity check failed. Bitcoin Green Core is shutting down."),
+QT_TRANSLATE_NOOP("arena-core", "Initialization sanity check failed. Arena Core is shutting down."),
 QT_TRANSLATE_NOOP("arena-core", "Input is not valid."),
 QT_TRANSLATE_NOOP("arena-core", "Insufficient funds"),
 QT_TRANSLATE_NOOP("arena-core", "Insufficient funds."),
@@ -430,7 +430,7 @@ QT_TRANSLATE_NOOP("arena-core", "Verifying blocks..."),
 QT_TRANSLATE_NOOP("arena-core", "Verifying wallet..."),
 QT_TRANSLATE_NOOP("arena-core", "Wallet %s resides outside data directory %s"),
 QT_TRANSLATE_NOOP("arena-core", "Wallet is locked."),
-QT_TRANSLATE_NOOP("arena-core", "Wallet needed to be rewritten: restart Bitcoin Green Core to complete"),
+QT_TRANSLATE_NOOP("arena-core", "Wallet needed to be rewritten: restart Arena Core to complete"),
 QT_TRANSLATE_NOOP("arena-core", "Wallet options:"),
 QT_TRANSLATE_NOOP("arena-core", "Wallet window title"),
 QT_TRANSLATE_NOOP("arena-core", "Warning"),

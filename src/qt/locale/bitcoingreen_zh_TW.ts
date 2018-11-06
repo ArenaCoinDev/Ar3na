@@ -164,8 +164,8 @@
         <translation>錢包確認加密</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green 現在會關閉程式來處理加密流程, 請注意, 僅僅是加密你的錢包並不能完全保護你的 AR3NA 幣被可疑軟體或病毒偷走的風險.</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena 現在會關閉程式來處理加密流程, 請注意, 僅僅是加密你的錢包並不能完全保護你的 AR3NA 幣被可疑軟體或病毒偷走的風險.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -582,8 +582,8 @@
         <translation>Tabs 工具列</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>Send coins to a AR3NA address</source>
@@ -602,16 +602,16 @@
         <translation>瀏覽 Masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green Core</source>
-        <translation>&amp;關於 Bitcoin Green Core</translation>
+        <source>&amp;About Arena Core</source>
+        <translation>&amp;關於 Arena Core</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Green Core</source>
-        <translation>顯示 Bitcoin Green Core 相關資訊</translation>
+        <source>Show information about Arena Core</source>
+        <translation>顯示 Arena Core 相關資訊</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Green</source>
-        <translation>修改 Bitcoin Green 設定</translation>
+        <source>Modify configuration options for Arena</source>
+        <translation>修改 Arena 設定</translation>
     </message>
     <message>
         <source>Sign messages with your AR3NA addresses to prove you own them</source>
@@ -662,12 +662,12 @@
         <translation>區塊鏈瀏覽視窗</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Green Core help message to get a list with possible Bitcoin Green command-line options</source>
-        <translation>顯示 Bitcoin Green Core 幫助訊息以取得 Bitcoin Green 命令列表選項</translation>
+        <source>Show the Arena Core help message to get a list with possible Arena command-line options</source>
+        <translation>顯示 Arena Core 幫助訊息以取得 Arena 命令列表選項</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core client</source>
-        <translation>Bitcoin Green Core 客戶端</translation>
+        <source>Arena Core client</source>
+        <translation>Arena Core 客戶端</translation>
     </message>
     </context>
 <context>
@@ -696,15 +696,15 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     </context>
 <context>
@@ -885,8 +885,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     </context>
 <context>

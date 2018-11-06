@@ -168,8 +168,8 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw AR3NAs stelen.</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw AR3NAs stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -590,8 +590,8 @@
         <translation>Tabblad werkbalk</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Kern</translation>
+        <source>Arena Core</source>
+        <translation>Arena Kern</translation>
     </message>
     <message>
         <source>Send coins to a AR3NA address</source>
@@ -610,16 +610,16 @@
         <translation>Bekijk masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green Core</source>
-        <translation>&amp;Over Bitcoin Green Kern</translation>
+        <source>&amp;About Arena Core</source>
+        <translation>&amp;Over Arena Kern</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Green Core</source>
-        <translation>Toon informatie over Bitcoin Green Kern</translation>
+        <source>Show information about Arena Core</source>
+        <translation>Toon informatie over Arena Kern</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Green</source>
-        <translation>Wijzig Bitcoin Green configuratie opties</translation>
+        <source>Modify configuration options for Arena</source>
+        <translation>Wijzig Arena configuratie opties</translation>
     </message>
     <message>
         <source>Sign messages with your AR3NA addresses to prove you own them</source>
@@ -670,12 +670,12 @@
         <translation>Block verkenner venster</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core client</source>
-        <translation>Bitcoin Green Core client</translation>
+        <source>Arena Core client</source>
+        <translation>Arena Core client</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin Green network</source>
-        <translation><numerusform>%n actieve verbinding(en) naar het Bitcoin Green netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het Bitcoin Green netwerk</numerusform></translation>
+        <source>%n active connection(s) to Arena network</source>
+        <translation><numerusform>%n actieve verbinding(en) naar het Arena netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het Arena netwerk</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1064,16 +1064,16 @@ MultiSend: %1</translation>
         <translation>versie</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Kern</translation>
+        <source>Arena Core</source>
+        <translation>Arena Kern</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Bitcoin Green Core</source>
-        <translation>Over Bitcoin Green Core</translation>
+        <source>About Arena Core</source>
+        <translation>Over Arena Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1103,16 +1103,16 @@ MultiSend: %1</translation>
         <translation>Welkom</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Green Core.</source>
-        <translation>Welkom bij Bitcoin Green Core</translation>
+        <source>Welcome to Arena Core.</source>
+        <translation>Welkom bij Arena Core</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
         <translation>Gebruik de standaard datafolder </translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Kern</translation>
+        <source>Arena Core</source>
+        <translation>Arena Kern</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1309,20 +1309,20 @@ MultiSend: %1</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin Green after logging in to the system.</source>
-        <translation>Bitcoin Green automatisch opstarten na inloggen op het systeem.</translation>
+        <source>Automatically start Arena after logging in to the system.</source>
+        <translation>Arena automatisch opstarten na inloggen op het systeem.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Green on system login</source>
-        <translation>&amp;Bitcoin Green starten bij systeemlogin</translation>
+        <source>&amp;Start Arena on system login</source>
+        <translation>&amp;Arena starten bij systeemlogin</translation>
     </message>
     <message>
         <source>&amp;Network</source>
         <translation>&amp;Netwerk</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Green.</source>
-        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van Bitcoin Green.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Arena.</source>
+        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van Arena.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1675,8 +1675,8 @@ MultiSend: %1</translation>
         <translation>Uit:</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin Green RPC console.</source>
-        <translation>Welkom bij de Bitcoin Green RPC console.</translation>
+        <source>Welcome to the Arena RPC console.</source>
+        <translation>Welkom bij de Arena RPC console.</translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -2081,8 +2081,8 @@ MultiSend: %1</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Green Core is shutting down...</source>
-        <translation>Bitcoin Green Core is aan het afsluiten...</translation>
+        <source>Arena Core is shutting down...</source>
+        <translation>Arena Core is aan het afsluiten...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2211,8 +2211,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Kern</translation>
+        <source>Arena Core</source>
+        <translation>Arena Kern</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2231,8 +2231,8 @@ MultiSend: %1</translation>
         <translation>De PIVX Core ontwikkelaars</translation>
     </message>
     <message>
-        <source>The Bitcoin Green Core developers</source>
-        <translation>De Bitcoin Green Core ontwikkelaars</translation>
+        <source>The Arena Core developers</source>
+        <translation>De Arena Core ontwikkelaars</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2625,8 +2625,8 @@ MultiSend: %1</translation>
         <translation>Copyright (C) 2015-%i The PIVX Core Ontwikkelaars</translation>
     </message>
     <message>
-        <source>Copyright (C) 2017-%i The Bitcoin Green Core Developers</source>
-        <translation>Copyright (C) 2017-%i The Bitcoin Green Core Ontwikkelaars</translation>
+        <source>Copyright (C) 2017-%i The Arena Core Developers</source>
+        <translation>Copyright (C) 2017-%i The Arena Core Ontwikkelaars</translation>
     </message>
     <message>
         <source>Debugging/Testing options:</source>

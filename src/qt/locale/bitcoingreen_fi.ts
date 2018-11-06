@@ -172,8 +172,8 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella AR3NAien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella AR3NAien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -591,8 +591,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>&amp;Apua</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Ydin</translation>
+        <source>Arena Core</source>
+        <translation>Arena Ydin</translation>
     </message>
     <message>
         <source>Send coins to a AR3NA address</source>
@@ -611,16 +611,16 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Selaa masternodeja</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core &amp;ytimestä</translation>
+        <source>&amp;About Arena Core</source>
+        <translation>Arena Core &amp;ytimestä</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Green Core</source>
-        <translation>Näytä tietoja Bitcoin Green Ytimestä</translation>
+        <source>Show information about Arena Core</source>
+        <translation>Näytä tietoja Arena Ytimestä</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Green</source>
-        <translation>Muokkaa konfiguraatio vaihtoehtoja Bitcoin Green:lle</translation>
+        <source>Modify configuration options for Arena</source>
+        <translation>Muokkaa konfiguraatio vaihtoehtoja Arena:lle</translation>
     </message>
     <message>
         <source>Sign messages with your AR3NA addresses to prove you own them</source>
@@ -671,12 +671,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Lohkon tutkija näkymä</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Green Core help message to get a list with possible Bitcoin Green command-line options</source>
-        <translation>Näytä Bitcoin Green Ydin apuviesti saadaksesi lista mahdollisista Bitcoin Green komentolinja komennoista.</translation>
+        <source>Show the Arena Core help message to get a list with possible Arena command-line options</source>
+        <translation>Näytä Arena Ydin apuviesti saadaksesi lista mahdollisista Arena komentolinja komennoista.</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core client</source>
-        <translation>Bitcoin Green Ydin asiakasohjelma</translation>
+        <source>Arena Core client</source>
+        <translation>Arena Ydin asiakasohjelma</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -934,8 +934,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Ydin</translation>
+        <source>Arena Core</source>
+        <translation>Arena Ydin</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -953,12 +953,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Tervetuloa</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Green Core.</source>
-        <translation>Tervetuloa Bitcoin Green Ytimeen.</translation>
+        <source>Welcome to Arena Core.</source>
+        <translation>Tervetuloa Arena Ytimeen.</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Ydin</translation>
+        <source>Arena Core</source>
+        <translation>Arena Ydin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1154,12 +1154,12 @@ Please check the address and try again.</source>
         <translation>Ekspertti</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin Green after logging in to the system.</source>
-        <translation>Automaattisesti käynnistä Bitcoin Green kun kirjaudut sisään.</translation>
+        <source>Automatically start Arena after logging in to the system.</source>
+        <translation>Automaattisesti käynnistä Arena kun kirjaudut sisään.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Green on system login</source>
-        <translation>&amp;Aloita Bitcoin Green järjestelmän kirjautumisessa</translation>
+        <source>&amp;Start Arena on system login</source>
+        <translation>&amp;Aloita Arena järjestelmän kirjautumisessa</translation>
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
@@ -1178,12 +1178,12 @@ Please check the address and try again.</source>
         <translation>&amp;Verkko</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Green.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Arena.</source>
         <translation>Käyttöliittymän kielen voi säätää täällä. Tämä asetus tulee voimaan uudelleenkäynnistettyäsi lompakon.</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin Green network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä Bitcoin Green verkkoon SOCKS5 proxyn kautta</translation>
+        <source>Connect to the Arena network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä Arena verkkoon SOCKS5 proxyn kautta</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1400,8 +1400,8 @@ Please check the address and try again.</source>
         <translation>Lohko ketju</translation>
     </message>
     <message>
-        <source>Open the Bitcoin Green debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Avaa Bitcoin Green debug loki nykyisestä sijainnista. Tämä voi kestää muutaman sekunnin suurille lokeille</translation>
+        <source>Open the Arena debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Avaa Arena debug loki nykyisestä sijainnista. Tämä voi kestää muutaman sekunnin suurille lokeille</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -1512,8 +1512,8 @@ Please check the address and try again.</source>
         <translation>Ulos:</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin Green RPC console.</source>
-        <translation>Tervetuloa Bitcoin Green RPC konsoliin.</translation>
+        <source>Welcome to the Arena RPC console.</source>
+        <translation>Tervetuloa Arena RPC konsoliin.</translation>
     </message>
     <message>
         <source>never</source>
@@ -1555,12 +1555,12 @@ Please check the address and try again.</source>
         <translation>Vaihtoehtoinen nimike uudelle vastaanottavalle osoitteelle</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin Green network.</source>
-        <translation>Vaihtoehtoinen viesti joka liitetään maksupyyntöön, joka näytetään kun pyyntö avataan. Huomio: Viestiä ei lähetetä maksun mukana Bitcoin Green verkolle.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Arena network.</source>
+        <translation>Vaihtoehtoinen viesti joka liitetään maksupyyntöön, joka näytetään kun pyyntö avataan. Huomio: Viestiä ei lähetetä maksun mukana Arena verkolle.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Bitcoin Green network.</source>
-        <translation>Vaihtoehtoinen viesti, joka liitetään maksupyyntöö, joka näytetään kun pyyntö avataan. &lt;br&gt; Huomio: Tätä viestiä ei lähetetä maksun mukana Bitcoin Green verkolle.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Arena network.</source>
+        <translation>Vaihtoehtoinen viesti, joka liitetään maksupyyntöö, joka näytetään kun pyyntö avataan. &lt;br&gt; Huomio: Tätä viestiä ei lähetetä maksun mukana Arena verkolle.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -1922,8 +1922,8 @@ Please check the address and try again.</source>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Green Core is shutting down...</source>
-        <translation>Bitcoin Green core sammuu...</translation>
+        <source>Arena Core is shutting down...</source>
+        <translation>Arena core sammuu...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2064,8 +2064,8 @@ Please check the address and try again.</source>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Ydin</translation>
+        <source>Arena Core</source>
+        <translation>Arena Ydin</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2084,8 +2084,8 @@ Please check the address and try again.</source>
         <translation>PIVX core kehittäjät</translation>
     </message>
     <message>
-        <source>The Bitcoin Green Core developers</source>
-        <translation>Bitcoin Green core kehittäjät</translation>
+        <source>The Arena Core developers</source>
+        <translation>Arena core kehittäjät</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2438,8 +2438,8 @@ Please check the address and try again.</source>
         <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko korruptoitunut</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Green Core</source>
-        <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko vaatii uudemman version Bitcoin Green Coresta</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Arena Core</source>
+        <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko vaatii uudemman version Arena Coresta</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>

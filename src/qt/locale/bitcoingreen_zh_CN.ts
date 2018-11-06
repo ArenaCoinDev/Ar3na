@@ -176,8 +176,8 @@
         <translation>确认钱包加密</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green将关闭以完成加密过程。但是，仅仅加密您的钱包是不够的，因为它并不能阻止恶意软件从您的电脑里面偷取AR3NAs。</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena将关闭以完成加密过程。但是，仅仅加密您的钱包是不够的，因为它并不能阻止恶意软件从您的电脑里面偷取AR3NAs。</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -598,8 +598,8 @@
         <translation>标签工具栏</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green 核心</translation>
+        <source>Arena Core</source>
+        <translation>Arena 核心</translation>
     </message>
     <message>
         <source>Send coins to a AR3NA address</source>
@@ -618,16 +618,16 @@
         <translation>浏览主节点</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green Core</source>
-        <translation>&amp;关于Bitcoin Green核心</translation>
+        <source>&amp;About Arena Core</source>
+        <translation>&amp;关于Arena核心</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Green Core</source>
-        <translation>显示Bitcoin Green核心的相关信息</translation>
+        <source>Show information about Arena Core</source>
+        <translation>显示Arena核心的相关信息</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Green</source>
-        <translation>修改Bitcoin Green的配置选项</translation>
+        <source>Modify configuration options for Arena</source>
+        <translation>修改Arena的配置选项</translation>
     </message>
     <message>
         <source>Sign messages with your AR3NA addresses to prove you own them</source>
@@ -678,12 +678,12 @@
         <translation>区块浏览窗口</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Green Core help message to get a list with possible Bitcoin Green command-line options</source>
-        <translation>显示Bitcoin Green Core帮助信息以获取可能的Bitcoin Green命令行选项的列表</translation>
+        <source>Show the Arena Core help message to get a list with possible Arena command-line options</source>
+        <translation>显示Arena Core帮助信息以获取可能的Arena命令行选项的列表</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core client</source>
-        <translation>Bitcoin Green核心客户端</translation>
+        <source>Arena Core client</source>
+        <translation>Arena核心客户端</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -812,15 +812,15 @@ Address: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green 核心</translation>
+        <source>Arena Core</source>
+        <translation>Arena 核心</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green 核心</translation>
+        <source>Arena Core</source>
+        <translation>Arena 核心</translation>
     </message>
     <message>
         <source>Error</source>
@@ -895,16 +895,16 @@ Address: %4
         <translation>如果您要禁用未经确认发送，在至少有一个确认之前&lt;br/&gt;不能更改。&lt;br/&gt;这也将影响您的余额计算。</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin Green client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>自动打开路由器上的Bitcoin Green钱包使用的端口。 这只有当您的路由器支持UPnP并且该享生效时才有用。</translation>
+        <source>Automatically open the Arena client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>自动打开路由器上的Arena钱包使用的端口。 这只有当您的路由器支持UPnP并且该享生效时才有用。</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
         <translation>&amp;使用SOCKS5代理（默认代理）</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Green on system login</source>
-        <translation>&amp;开机启动Bitcoin Green</translation>
+        <source>&amp;Start Arena on system login</source>
+        <translation>&amp;开机启动Arena</translation>
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
@@ -1038,8 +1038,8 @@ Address: %4
         <translation>您目前的支出余额</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin Green network after a connection is established, but this process has not completed yet.</source>
-        <translation>显示的信息可能已过期。建立连接后，您的钱包会自动与Bitcoin Green网络同步，但此过程尚未完成。</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Arena network after a connection is established, but this process has not completed yet.</source>
+        <translation>显示的信息可能已过期。建立连接后，您的钱包会自动与Arena网络同步，但此过程尚未完成。</translation>
     </message>
     <message>
         <source>Your current total balance</source>
@@ -1112,12 +1112,12 @@ Address: %4
         <translation>&amp;消息：</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin Green network.</source>
-        <translation>附加到付款请求的可选消息，将在请求打开时显示。 注意：消息不会在付款时通过Bitcoin Green网络发送。</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Arena network.</source>
+        <translation>附加到付款请求的可选消息，将在请求打开时显示。 注意：消息不会在付款时通过Arena网络发送。</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Bitcoin Green network.</source>
-        <translation>附加到付款请求的可选消息，将在请求打开时显示。&lt;br&gt; 注意：消息不会在付款时通过Bitcoin Green网络发送。</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Arena network.</source>
+        <translation>附加到付款请求的可选消息，将在请求打开时显示。&lt;br&gt; 注意：消息不会在付款时通过Arena网络发送。</translation>
     </message>
     <message>
         <source>&amp;Label:</source>
@@ -1252,8 +1252,8 @@ Address: %4
         <translation>消息:</translation>
     </message>
     <message>
-        <source>A message that was attached to the arena: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin Green network.</source>
-        <translation>附加到arena：URI的消息，该消息将与转账信息一起存储以供参考。 注意：此消息不会通过Bitcoin Green网络发送。</translation>
+        <source>A message that was attached to the arena: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Arena network.</source>
+        <translation>附加到arena：URI的消息，该消息将与转账信息一起存储以供参考。 注意：此消息不会通过Arena网络发送。</translation>
     </message>
     <message>
         <source>Enter a label for this address to add it to your address book</source>
@@ -1393,8 +1393,8 @@ Address: %4
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green 核心</translation>
+        <source>Arena Core</source>
+        <translation>Arena 核心</translation>
     </message>
     </context>
 <context>
@@ -1479,8 +1479,8 @@ Address: %4
         <translation>在收到相关警报时执行命令，或者看到一个很长的分叉（cmd中的%s被消息替换）</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Green Core will not work properly.</source>
-        <translation>注意：请检查您的电脑的日期和时间是否正确！ 如果您的时间设置不正确，Bitcoin Green Core将无法正常工作。</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Arena Core will not work properly.</source>
+        <translation>注意：请检查您的电脑的日期和时间是否正确！ 如果您的时间设置不正确，Arena Core将无法正常工作。</translation>
     </message>
     <message>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>

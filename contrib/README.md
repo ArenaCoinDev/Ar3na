@@ -37,7 +37,7 @@ for Debian-based Linux systems. If you compile arenad/arena-qt yourself, there a
 Notes on getting Gitian builds up and running using KVM.
 
 ### [Gitian-keys](/contrib/gitian-keys)
-PGP keys used for signing Bitcoin Green Core [Gitian release](/doc/release-process.md) results.
+PGP keys used for signing Arena Core [Gitian release](/doc/release-process.md) results.
 
 ### [MacDeploy](/contrib/macdeploy) ###
 Scripts and notes for Mac builds. 
@@ -49,7 +49,7 @@ Test and Verify Tools
 ---------------------
 
 ### [TestGen](/contrib/testgen) ###
-Utilities to generate test vectors for the data-driven Bitcoin Green tests.
+Utilities to generate test vectors for the data-driven Arena tests.
 
 ### [Test Patches](/contrib/test-patches) ###
 These patches are applied when the automated pull-tester

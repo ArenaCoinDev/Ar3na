@@ -1,13 +1,13 @@
-Bitcoin Green Core
+Arena Core
 =====================
 
 Setup
 ---------------------
-[Bitcoin Green Core](http://savebitcoin.io) is the original Bitcoin Green client and it builds the backbone of the network. However, it downloads and stores the entire history of Bitcoin Green transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[Arena Core](http://savebitcoin.io) is the original Arena client and it builds the backbone of the network. However, it downloads and stores the entire history of Arena transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Bitcoin Green on your native platform.
+The following are some helpful notes on how to run Arena on your native platform.
 
 ### Unix
 
@@ -30,7 +30,7 @@ Drag Arena-Qt to your applications folder, and then run Arena-Qt.
 
 Building
 ---------------------
-The following are developer notes on how to build Bitcoin Green on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Arena on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -38,7 +38,7 @@ The following are developer notes on how to build Bitcoin Green on your native p
 
 Development
 ---------------------
-The Bitcoin Green repo's [root README](https://github.com/arena/arena/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Arena repo's [root README](https://github.com/arena/arena/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

@@ -176,8 +176,8 @@
         <translation>Confirmar encriptação da carteira</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green encerrará para terminar o processo de encriptação. Lembre-se que encriptar sua carteira não protege completamente suas AR3NAs contra roubo por malware infectando seu computador.</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena encerrará para terminar o processo de encriptação. Lembre-se que encriptar sua carteira não protege completamente suas AR3NAs contra roubo por malware infectando seu computador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -871,8 +871,8 @@
         <translation>Deletar todas as transações da carteira e somente recuperar aquelas partes do blockchain através de -rescan na inicialização</translation>
     </message>
     <message>
-        <source>Disable all Bitcoin Green specific functionality (Masternodes, SwiftTX, Budgeting) (0-1, default: %u)</source>
-        <translation>Desabilitar todas as funcionacilidades específicas da Bitcoin Green (Masternodes, SwiftTX, Budgeting) (0-1, default %u)</translation>
+        <source>Disable all Arena specific functionality (Masternodes, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <translation>Desabilitar todas as funcionacilidades específicas da Arena (Masternodes, SwiftTX, Budgeting) (0-1, default %u)</translation>
     </message>
     <message>
         <source>Connect through SOCKS5 proxy</source>
@@ -1219,8 +1219,8 @@
         <translation>Carteira esta bloqueada.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Bitcoin Green Core to complete</source>
-        <translation>Carteira precisa ser reescrita: reinicie o Bitcoin Green Core para completar.</translation>
+        <source>Wallet needed to be rewritten: restart Arena Core to complete</source>
+        <translation>Carteira precisa ser reescrita: reinicie o Arena Core para completar.</translation>
     </message>
     <message>
         <source>Wallet options:</source>

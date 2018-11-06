@@ -168,8 +168,8 @@
         <translation>Подтверждение шифрования кошелька</translation>
     </message>
     <message>
-        <source>Bitcoin Green will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Green сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши AR3NA от кражи с использованием вредоносного ПО.</translation>
+        <source>Arena will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your AR3NAs from being stolen by malware infecting your computer.</source>
+        <translation>Arena сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши AR3NA от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -590,8 +590,8 @@
         <translation>Панель вкладок</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>Send coins to a AR3NA address</source>
@@ -610,16 +610,16 @@
         <translation>Обзор мастернод</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Green Core</source>
-        <translation>&amp;О Bitcoin Green Core</translation>
+        <source>&amp;About Arena Core</source>
+        <translation>&amp;О Arena Core</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Green Core</source>
-        <translation>Показать информацию о Bitcoin Green Core</translation>
+        <source>Show information about Arena Core</source>
+        <translation>Показать информацию о Arena Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Green</source>
-        <translation>Изменение параметров конфигурации Bitcoin Green</translation>
+        <source>Modify configuration options for Arena</source>
+        <translation>Изменение параметров конфигурации Arena</translation>
     </message>
     <message>
         <source>Sign messages with your AR3NA addresses to prove you own them</source>
@@ -670,12 +670,12 @@
         <translation>Окно обзора блока</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Green Core help message to get a list with possible Bitcoin Green command-line options</source>
-        <translation>Смотрите помощь к программе, чтобы получить документацию ко всем возможным опциям комманды Bitcoin Green</translation>
+        <source>Show the Arena Core help message to get a list with possible Arena command-line options</source>
+        <translation>Смотрите помощь к программе, чтобы получить документацию ко всем возможным опциям комманды Arena</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core client</source>
-        <translation>Клиент Bitcoin Green Core</translation>
+        <source>Arena Core client</source>
+        <translation>Клиент Arena Core</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1136,16 +1136,16 @@ MultiSend: %1</translation>
         <translation>версия</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-бит)</translation>
     </message>
     <message>
-        <source>About Bitcoin Green Core</source>
-        <translation>О Bitcoin Green Core</translation>
+        <source>About Arena Core</source>
+        <translation>О Arena Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1191,16 +1191,16 @@ MultiSend: %1</translation>
         <translation>Добро пожаловать</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Green Core.</source>
-        <translation>Добро пожаловать в Bitcoin Green Core.</translation>
+        <source>Welcome to Arena Core.</source>
+        <translation>Добро пожаловать в Arena Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Green Core will store its data.</source>
-        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные Bitcoin Green Core.</translation>
+        <source>As this is the first time the program is launched, you can choose where Arena Core will store its data.</source>
+        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные Arena Core.</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core will download and store a copy of the Bitcoin Green block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Bitcoin Green Core загрузит и сохранит копию цепочки блоков Bitcoin Green. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться кошелек.</translation>
+        <source>Arena Core will download and store a copy of the Arena block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Arena Core загрузит и сохранит копию цепочки блоков Arena. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться кошелек.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1211,8 +1211,8 @@ MultiSend: %1</translation>
         <translation>Использовать другой каталог данных:</translation>
     </message>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1531,8 +1531,8 @@ Please check the address and try again.</source>
         <translation>Отключив проведение неподтвержденных изменений все изменения о транзакции &lt;br/&gt;не будут использованы пока транзакция не получит хотя бы одно подтверждение.&lt;br/&gt;Также это влияет на расчет вашего баланса.</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin Green client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть клиентский порт Bitcoin Green через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
+        <source>Automatically open the Arena client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть клиентский порт Arena через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1551,12 +1551,12 @@ Please check the address and try again.</source>
         <translation>Эксперт</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin Green after logging in to the system.</source>
-        <translation>Автоматически запускать Bitcoin Green после входа в систему.</translation>
+        <source>Automatically start Arena after logging in to the system.</source>
+        <translation>Автоматически запускать Arena после входа в систему.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Green on system login</source>
-        <translation>&amp;Запускать Bitcoin Green при входе в систему</translation>
+        <source>&amp;Start Arena on system login</source>
+        <translation>&amp;Запускать Arena при входе в систему</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1583,16 +1583,16 @@ Please check the address and try again.</source>
         <translation>&amp;Сеть</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Green.</source>
-        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска Bitcoin Green.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Arena.</source>
+        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска Arena.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Карта порта, использующего &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin Green network through a SOCKS5 proxy.</source>
-        <translation>Подключиться к сети Bitcoin Green через SOCKS5 прокси.</translation>
+        <source>Connect to the Arena network through a SOCKS5 proxy.</source>
+        <translation>Подключиться к сети Arena через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1738,8 +1738,8 @@ Please check the address and try again.</source>
         <translation>Награды за хранение и мастерноды, которые еще не *созрели*</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin Green network after a connection is established, but this process has not completed yet.</source>
-        <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью Bitcoin Green после установки соединения, но этот процесс еще не завершен. </translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Arena network after a connection is established, but this process has not completed yet.</source>
+        <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью Arena после установки соединения, но этот процесс еще не завершен. </translation>
     </message>
     <message>
         <source>Unconfirmed transactions to watch-only addresses</source>
@@ -2025,8 +2025,8 @@ Please check the address and try again.</source>
         <translation>Блокчейн</translation>
     </message>
     <message>
-        <source>Open the Bitcoin Green debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Открыть протокол отладки Bitcoin Green. Это может занять некоторе время, если файл протокола очень большой.</translation>
+        <source>Open the Arena debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Открыть протокол отладки Arena. Это может занять некоторе время, если файл протокола очень большой.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2186,8 +2186,8 @@ Please check the address and try again.</source>
         <translation>Вывод:</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin Green RPC console.</source>
-        <translation>Добро пожаловать в окружение Bitcoin Green RPC.</translation>
+        <source>Welcome to the Arena RPC console.</source>
+        <translation>Добро пожаловать в окружение Arena RPC.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2540,8 +2540,8 @@ Please check the address and try again.</source>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Green Core is shutting down...</source>
-        <translation>Bitcoin Green Core выключается...</translation>
+        <source>Arena Core is shutting down...</source>
+        <translation>Arena Core выключается...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2630,8 +2630,8 @@ Please check the address and try again.</source>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Green Core</source>
-        <translation>Bitcoin Green Core</translation>
+        <source>Arena Core</source>
+        <translation>Arena Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2650,8 +2650,8 @@ Please check the address and try again.</source>
         <translation>Разработчики PIVX Core</translation>
     </message>
     <message>
-        <source>The Bitcoin Green Core developers</source>
-        <translation>Разработчики Bitcoin Green Core</translation>
+        <source>The Arena Core developers</source>
+        <translation>Разработчики Arena Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2940,8 +2940,8 @@ Please check the address and try again.</source>
         <translation>Copyright (C) 2015-%i Разработчики PIVX Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2017-%i The Bitcoin Green Core Developers</source>
-        <translation>Copyright (C) 2017-%i Разработчики Bitcoin Green Core</translation>
+        <source>Copyright (C) 2017-%i The Arena Core Developers</source>
+        <translation>Copyright (C) 2017-%i Разработчики Arena Core</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

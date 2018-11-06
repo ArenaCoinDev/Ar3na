@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Bitcoin Green developers
+// Copyright (c) 2017-2018 The Arena developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1865,7 +1865,7 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
     // slack space in .dat files; that is bad if the old data is
     // unencrypted private keys. So:
     StartShutdown();
-    return "wallet encrypted; bitcoin green server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
+    return "wallet encrypted; arena server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
 }
 
 UniValue lockunspent(const UniValue& params, bool fHelp)

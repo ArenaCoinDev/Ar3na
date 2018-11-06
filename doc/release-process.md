@@ -29,7 +29,7 @@ Check out the source code in the following directory hierarchy.
     git clone https://github.com/devrandom/gitian-builder.git
     git clone https://github.com/arena/arena.git
 
-### Bitcoin Green maintainers/release engineers, suggestion for writing release notes
+### Arena maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -97,7 +97,7 @@ NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from 
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Bitcoin Green Core for Linux, Windows, and OS X:
+### Build and sign Arena Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
     ./bin/gbuild --memory 3000 --commit arena=v${VERSION} ../arena/contrib/gitian-descriptors/gitian-linux.yml
