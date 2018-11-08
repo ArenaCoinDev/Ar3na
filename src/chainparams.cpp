@@ -106,11 +106,11 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Arena: 1 day
+        nTargetTimespan = 2 * 60; // Arena: 1 day
         nTargetSpacing = 2 * 60;  // Arena: 2 minutes
         nMaturity = 10;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 21000000 * COIN;
+        nMaxMoneyOut = 12500000 * COIN;
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;
@@ -149,6 +149,9 @@ public:
         genesis.nNonce = 0;
 
         hashGenesisBlock = genesis.GetHash();
+
+
+
         assert(hashGenesisBlock == uint256("0x"));
         assert(genesis.hashMerkleRoot == uint256("0x"));
 
@@ -223,7 +226,7 @@ public:
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 1;
-        nMaxMoneyOut = 21000000 * COIN;
+        nMaxMoneyOut = 12500000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1534570200;
