@@ -2,12 +2,11 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017 The Fyn Coin developers
+// Copyright (c) 2017-2018 The Arena developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "chainparams.h"
-#include "bignum.h"
 #include "random.h"
 #include "util.h"
 #include "utilstrencodings.h"
@@ -54,12 +53,13 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x0000098a5763d6f83a89a208d1db491bae85a254e5c349b68c5723c7e1fb1663"));
+    (0,      uint256("0x"));
+
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1516926684, // * UNIX timestamp of last checkpoint block
-    0,          // * total number of transactions between genesis and last checkpoint
+    1533767118, // * UNIX timestamp of last checkpoint block
+    600513,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -69,7 +69,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1516926684,
+    1740710,
     0,
     250};
 
@@ -77,7 +77,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1516926684,
+    1454124731,
     0,
     100};
 
@@ -93,11 +93,11 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x54;
-        pchMessageStart[1] = 0xdc;
-        pchMessageStart[2] = 0x12;
-        pchMessageStart[3] = 0xae;
-        vAlertPubKey = ParseHex("045ad6f1551c2367f81c0ecb4d45d088298442887645a314dfcba3039401872473b0200e69d9679a0d7cc307fb9aaaacafb0cebc18050ce7c995fa19c6accc8415");
+        pchMessageStart[0] = 0x52;
+        pchMessageStart[1] = 0xd6;
+        pchMessageStart[2] = 0xe2;
+        pchMessageStart[3] = 0xa1;
+        vAlertPubKey = ParseHex("04d2df519f53e2eaa4a7d7ff3347a360520c2f4b8f07d0241b5b6ba5ce8e3d6ecba5443696473a387adff27aa6bb72b952ff23026e088cff9f47cbb387ed52c326");
         nDefaultPort = 9333;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nSubsidyHalvingInterval = 1050000;
@@ -106,21 +106,21 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Fyn Coin: 1 day
-        nTargetSpacing = 1 * 60;  // Fyn Coin: 2 minutes
+        nTargetTimespan = 2 * 60; // Arena: 1 day
+        nTargetSpacing = 2 * 60;  // Arena: 2 minutes
         nMaturity = 10;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 21000000 * COIN;
+        nMaxMoneyOut = 50000000 * COIN;
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;
-        nModifierUpdateBlock = 1; // we use the version 2 for FYN
+        nModifierUpdateBlock = 1; // we use the version 2 for AR3NA
 
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
          * be spent as it did not originally exist in the database.
          *
-         * python ~/genesis.py -a quark-hash -z "Even With Energy Surplus, Canada Unable to Meet Electricity Demands of Bitcoin Miners" -t 1516926684 -v 0 -p 04e5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363
+         * genesis.py -a quark-hash -z "Even With Energy Surplus, Canada Unable to Meet Electricity Demands of Bitcoin Miners" -t 1516926684 -v 0 -p 04e5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363
          * 04ffff001d01042642544320426c6f636b20353031353932202d20323031372d31322d32392031353a34333a3337
          * algorithm: quark-hash
          * merkle hash: 07cbcacfc822fba6bbeb05312258fa43b96a68fc310af8dfcec604591763f7cf
@@ -133,7 +133,7 @@ public:
          * nonce: 21256609
          * genesis_hash: 000008467c3a9c587533dea06ad9380cded3ed32f9742a6c0c1aebc21bf2bc9b
          */
-        const char* pszTimestamp = "FynCoin 10/19/18";
+        const char* pszTimestamp = "Ar3na will now launch as a PoS Coin 11/7/2018";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -146,70 +146,116 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1516926690;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 630531;
+        genesis.nNonce = 0;
 
         hashGenesisBlock = genesis.GetHash();
 
 /*
-    if(genesis.GetHash() != uint256("0x"))
-    {
-          printf("MSearching for genesis block...\n");
-          uint256 hashTarget;
-          hashTarget.SetCompact(genesis.nBits);
-          while(uint256(genesis.GetHash()) > uint256(hashTarget))
-          {
-              ++genesis.nNonce;
-              if (genesis.nNonce == 0)
-              {
-                  printf("Mainnet NONCE WRAPPED, incrementing time");
-                  std::cout << std::string("Mainnet NONCE WRAPPED, incrementing time:\n");
-                  ++genesis.nTime;
-              }
-              if (genesis.nNonce % 10000 == 0)
-              {
-                  printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
-              }
-          }
-          printf("Mainnet block.nTime = %u \n", genesis.nTime);
-          printf("Mainnet block.nNonce = %u \n", genesis.nNonce);
-          printf("Mainnet block.hashMerkleRoot: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-          printf("Mainnet block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-    }
-
+        	 //////////////
+                //////////////
+                        // calculate Genesis Block
+                        // Reset genesis
+                        consensus.hashGenesisBlock = uint256S("0x");
+                        std::cout << std::string("Begin calculating Mainnet Genesis Block:\n");
+                        if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
+                            LogPrintf("Calculating Mainnet Genesis Block:\n");
+                            arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
+                            uint256 hash;
+                            genesis.nNonce = 0;
+                            // This will figure out a valid hash and Nonce if you're
+                            // creating a different genesis block:
+                            // uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+                            // hashTarget.SetCompact(genesis.nBits, &fNegative, &fOverflow).getuint256();
+                            // while (genesis.GetHash() > hashTarget)
+                            while (UintToArith256(genesis.GetHash()) > hashTarget)
+                            {
+                                ++genesis.nNonce;
+                                if (genesis.nNonce == 0)
+                                {
+                                    LogPrintf("NONCE WRAPPED, incrementing time");
+                                    std::cout << std::string("NONCE WRAPPED, incrementing time:\n");
+                                    ++genesis.nTime;
+                                }
+                                if (genesis.nNonce % 10000 == 0)
+                                {
+                                    LogPrintf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
+                                    // std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
+                                }
+                            }
+                            std::cout << "Mainnet ---\n";
+                            std::cout << "  nonce: " << genesis.nNonce <<  "\n";
+                            std::cout << "   time: " << genesis.nTime << "\n";
+                            std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
+                            std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
+                            // Mainnet --- nonce: 296277 time: 1390095618 hash: 000000bdd771b14e5a031806292305e563956ce2584278de414d9965f6ab54b0
+                        }
+                        std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
 */
-        assert(hashGenesisBlock == uint256("0x0000098a5763d6f83a89a208d1db491bae85a254e5c349b68c5723c7e1fb1663"));
-        assert(genesis.hashMerkleRoot == uint256("0xe70e020dfe9a90b7e80462de4caaf4cf14b645df0b28b84095314ce0b326e652"));
-
-        vSeeds.push_back(CDNSSeedData("0.0.0.0.", "0.0.0.0"));
 
 
-        // Fyn Coin addresses start with 'G'
+
+if(genesis.GetHash() != uint256("0x"))
+{
+      printf("MSearching for genesis block...\n");
+      uint256 hashTarget;
+      hashTarget.SetCompact(genesis.nBits);
+      while(uint256(genesis.GetHash()) > uint256(hashTarget))
+      {
+          ++genesis.nNonce;
+          if (genesis.nNonce == 0)
+          {
+              printf("Mainnet NONCE WRAPPED, incrementing time");
+              std::cout << std::string("Mainnet NONCE WRAPPED, incrementing time:\n");
+              ++genesis.nTime;
+          }
+          if (genesis.nNonce % 10000 == 0)
+          {
+              printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
+          }
+      }
+      printf("Mainnet block.nTime = %u \n", genesis.nTime);
+      printf("Mainnet block.nNonce = %u \n", genesis.nNonce);
+      printf("Mainnet block.hashMerkleRoot: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+      printf("Mainnet block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+}
+
+
+
+        assert(hashGenesisBlock == uint256("0x"));
+        assert(genesis.hashMerkleRoot == uint256("0x"));
+
+        // DNS Seeding
+        vSeeds.push_back(CDNSSeedData("0.0.0.0", "0.0.0.0"));
+        vSeeds.push_back(CDNSSeedData("0.0.0.0", "0.0.0.0"));
+        vSeeds.push_back(CDNSSeedData("0.0.0.0", "0.0.0.0"));
+
+        // Arena addresses start with 'G'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 38);
-        // Fyn Coin script addresses start with '3'
+        // Arena script addresses start with '3'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 6);
-        // Fyn Coin private keys start with 'K'
+        // Arena private keys start with 'K'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 46);
-        // Fyn Coin BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
+        // Arena BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        // Fyn Coin BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
+        // Arena BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        // Fyn Coin BIP44 coin type is '222' (0x800000de)
+        // Arena BIP44 coin type is '222' (0x800000de)
         // BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0xde).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false; //default true
         fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = true; //default false
         fSkipProofOfWorkCheck = false;
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "04cc17389379a0e323f53ea504d38cd71f43dc22f597805fed33a51b05ced1a3ae0db84089985f351b3737721736a82f58c8bd529f79c8ffe57e922bda792146ab";
+        strSporkKey = "04026c33ff67ad40db68e7ba4f6d858a56550a7aba460857d1cf0f34af4e7d090b255928df8135ee5343df02b88801635ef054da6ef3071ce69c2c3134acad54e9";
         strMasternodePoolDummyAddress = "GSJVWUkt6HtSCY2SaJ2akeyJUg8bg1hW3S";
         nStartMasternodePayments = genesis.nTime + 86400; // 24 hours after genesis creation
 
@@ -233,45 +279,45 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0x4a;
-        pchMessageStart[1] = 0x2d;
-        pchMessageStart[2] = 0x32;
-        pchMessageStart[3] = 0xbc;
-        vAlertPubKey = ParseHex("041b2b4c86273359acac3522471911ed2b303eaab65e8a1de01c06e89f2eab1e55234a4b504f3ce20c6f661f007d0ca15623b4358d9855c7c8ba793a24fa315e22");
+        pchMessageStart[0] = 0x33;
+        pchMessageStart[1] = 0x8a;
+        pchMessageStart[2] = 0xe5;
+        pchMessageStart[3] = 0xa8;
+        vAlertPubKey = ParseHex("04ba89975265af1d4c6295d3587eb4a0e4b758bde1621ef2ab8f92b98e7ed1c85547c9b7a3f145a66aa2abb91db5c13295828e77d823ea6d9b4bb89912425e1efe");
         nDefaultPort = 19333;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Fyn Coin: 1 day
-        nTargetSpacing = 2 * 60;  // Fyn Coin: 1 minute
+        nTargetTimespan = 1 * 60; // Arena: 1 day
+        nTargetSpacing = 2 * 60;  // Arena: 1 minute
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 1;
-        nMaxMoneyOut = 21000000 * COIN;
+        nMaxMoneyOut = 50000000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1516926690;
-        genesis.nNonce = 630531;
+        genesis.nTime = 1534570200;
+        genesis.nNonce = 21148656;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000098a5763d6f83a89a208d1db491bae85a254e5c349b68c5723c7e1fb1663"));
+        assert(hashGenesisBlock == uint256("0x000000938f4f20c6ccb3fea36539ade5af73d0bb45c55af64c7f7f1bfa5f3381"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        // Testnet Fyn Coin addresses start with 'g'
+        // Testnet Arena addresses start with 'g'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 98);
-        // Testnet Fyn Coin script addresses start with '5' or '6'
+        // Testnet Arena script addresses start with '5' or '6'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 12);
         // Testnet private keys start with 'k'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 108);
-        // Testnet Fyn Coin BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Testnet Arena BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Fyn Coin BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Testnet Arena BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        // Testnet bitcoin green BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet arena BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
@@ -284,7 +330,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04abb5e65280dda6a113fadfb9877f9c399532245fe1acb61de293ab298034d5084277fab3768774a3b68cbbe5021cc5049ec8c9997a13f64da1afa0bcfb156db1";
+        strSporkKey = "041bab97de321ccf1e78d10164f90bd87e3070ddb5586389013e9f15c4931e2451f318f1a8f177c5e9a3f5b4b13145f78e8116d2aa7ae14ef27f1f076b02ba852c";
         strMasternodePoolDummyAddress = "gbJ4Qad4xc77PpLzMx6rUegAs6aUPWkcUq";
         nStartMasternodePayments = genesis.nTime + 86400; // 24 hours after genesis
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
@@ -317,16 +363,16 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Fyn Coin: 1 day
-        nTargetSpacing = 2 * 60;        // Fyn Coin: 1 minutes
+        nTargetTimespan = 24 * 60 * 60; // Arena: 1 day
+        nTargetSpacing = 2 * 60;        // Arena: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1516926690;
-        genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 630531;
+        genesis.nTime = 1516926684;
+        genesis.nBits = 0x207fffff;
+        genesis.nNonce = 20542300;
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 29333;
-        assert(hashGenesisBlock == uint256("0x0000098a5763d6f83a89a208d1db491bae85a254e5c349b68c5723c7e1fb1663"));
+        assert(hashGenesisBlock == uint256("0x229874aa8a92df3347600978e226ba57bc994b9fa291ea50519afafca2d50ed3"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Regtest mode doesn't have any DNS seeds.
