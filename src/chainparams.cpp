@@ -230,7 +230,7 @@ if(genesis.GetHash() != uint256("0x"))
         vSeeds.push_back(CDNSSeedData("0.0.0.0", "0.0.0.0"));
 
         // Arena addresses start with 'G'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 38);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 23);
         // Arena script addresses start with '3'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 6);
         // Arena private keys start with 'K'
