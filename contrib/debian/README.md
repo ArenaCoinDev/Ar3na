@@ -1,21 +1,21 @@
 
 Debian
 ====================
-This directory contains files used to package arenad/arena-qt
-for Debian-based Linux systems. If you compile arenad/arena-qt yourself, there are some useful files here.
+This directory contains files used to package ar3nad/ar3na-qt
+for Debian-based Linux systems. If you compile ar3nad/ar3na-qt yourself, there are some useful files here.
 
-## arena: URI support ##
+## ar3na: URI support ##
 
 
-arena-qt.desktop  (Gnome / Open Desktop)
+ar3na-qt.desktop  (Gnome / Open Desktop)
 To install:
 
-	sudo desktop-file-install arena-qt.desktop
+	sudo desktop-file-install ar3na-qt.desktop
 	sudo update-desktop-database
 
 If you build yourself, you will either need to modify the paths in
-the .desktop file or copy or symlink your arenaqt binary to `/usr/bin`
-and the `../../share/pixmaps/arena128.png` to `/usr/share/pixmaps`
+the .desktop file or copy or symlink your ar3naqt binary to `/usr/bin`
+and the `../../share/pixmaps/ar3na128.png` to `/usr/share/pixmaps`
 
-arena-qt.protocol (KDE)
+ar3na-qt.protocol (KDE)
 

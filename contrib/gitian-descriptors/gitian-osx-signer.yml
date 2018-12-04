@@ -1,5 +1,5 @@
 ---
-name: "arena-dmg-signer"
+name: "ar3na-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/arena/arena-detached-sigs.git"
+- "url": "https://github.com/ar3na/ar3na-detached-sigs.git"
   "dir": "signature"
 files:
-- "arena-osx-unsigned.tar.gz"
+- "ar3na-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,11 +27,11 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=arena-osx-unsigned.tar.gz
-  SIGNED=arena-osx-signed.dmg
+  UNSIGNED=ar3na-osx-unsigned.tar.gz
+  SIGNED=ar3na-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"
   ./detached-sig-apply.sh ${UNSIGNED} signature/osx
-  ${WRAP_DIR}/genisoimage -no-cache-inodes -D -l -probe -V "Arena-Qt" -no-pad -r -dir-mode 0755 -apple -o uncompressed.dmg signed-app
+  ${WRAP_DIR}/genisoimage -no-cache-inodes -D -l -probe -V "Ar3na-Qt" -no-pad -r -dir-mode 0755 -apple -o uncompressed.dmg signed-app
   ${WRAP_DIR}/dmg dmg uncompressed.dmg ${OUTDIR}/${SIGNED}

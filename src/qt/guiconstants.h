@@ -8,12 +8,12 @@
 #define BITCOIN_QT_GUICONSTANTS_H
 
 /* Milliseconds between model updates */
-static const int MODEL_UPDATE_DELAY = 1000;
+static const int MODEL_UPDATE_DELAY = 250;
 
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* Arena GUI -- Size of icons in status bar */
+/* Ar3na GUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 16;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -35,10 +35,6 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 #define COLOR_BLACK QColor(51, 51, 51)
 /* Transaction list -- TX status decoration - conflicted */
 #define COLOR_CONFLICTED QColor(255, 0, 0)
-/* Transaction list -- TX status decoration - orphan (Light Gray #D3D3D3) */
-#define COLOR_ORPHAN QColor(211, 211, 211)
-/* Transaction list -- TX status decoration - stake (Green #8A2BE2) */
-#define COLOR_STAKE QColor(15,127,18)
 
 /* Tooltips longer than this (in characters) are converted into rich text,
    so that they can be word-wrapped.
@@ -54,9 +50,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 35
 
-#define QAPP_ORG_NAME "Arena"
+#define QAPP_ORG_NAME "Ar3na"
 #define QAPP_ORG_DOMAIN "savebitcoin.io"
-#define QAPP_APP_NAME_DEFAULT "Arena-Qt"
-#define QAPP_APP_NAME_TESTNET "Arena-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "Ar3na-Qt"
+#define QAPP_APP_NAME_TESTNET "Ar3na-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

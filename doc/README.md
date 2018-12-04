@@ -1,28 +1,28 @@
-Arena Core
+Ar3na Core
 =====================
 
 Setup
 ---------------------
-[Arena Core](http://savebitcoin.io) is the original Arena client and it builds the backbone of the network. However, it downloads and stores the entire history of Arena transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[Ar3na Core](http://savebitcoin.io) is the original Ar3na client and it builds the backbone of the network. However, it downloads and stores the entire history of Ar3na transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Arena on your native platform.
+The following are some helpful notes on how to run Ar3na on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- bin/32/arena-qt (GUI, 32-bit) or bin/32/arenad (headless, 32-bit)
-- bin/64/arena-qt (GUI, 64-bit) or bin/64/arenad (headless, 64-bit)
+- bin/32/ar3na-qt (GUI, 32-bit) or bin/32/ar3nad (headless, 32-bit)
+- bin/64/ar3na-qt (GUI, 64-bit) or bin/64/ar3nad (headless, 64-bit)
 
 ### Windows
 
-Unpack the files into a directory, and then run arena-qt.exe.
+Unpack the files into a directory, and then run ar3na-qt.exe.
 
 ### OSX
 
-Drag Arena-Qt to your applications folder, and then run Arena-Qt.
+Drag Ar3na-Qt to your applications folder, and then run Ar3na-Qt.
 
 ### Need Help?
 
@@ -30,7 +30,7 @@ Drag Arena-Qt to your applications folder, and then run Arena-Qt.
 
 Building
 ---------------------
-The following are developer notes on how to build Arena on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Ar3na on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -38,7 +38,7 @@ The following are developer notes on how to build Arena on your native platform.
 
 Development
 ---------------------
-The Arena repo's [root README](https://github.com/arena/arena/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Ar3na repo's [root README](https://github.com/ar3na/ar3na/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

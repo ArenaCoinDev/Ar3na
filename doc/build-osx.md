@@ -1,6 +1,6 @@
 Mac OS X Build Instructions and Notes
 ====================================
-This guide will show you how to build arenad (headless client) for OSX.
+This guide will show you how to build ar3nad (headless client) for OSX.
 
 Notes
 -----
@@ -40,14 +40,14 @@ Instructions: Homebrew
 
         brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf qt5 libzmq
 
-### Building `arenad`
+### Building `ar3nad`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/arena/arena.git
-        cd arena
+        git clone https://github.com/ar3na/ar3na.git
+        cd ar3na
 
-2.  Build arenad:
+2.  Build ar3nad:
 
         ./autogen.sh
         ./configure --with-gui=qt5
@@ -57,7 +57,7 @@ Instructions: Homebrew
 
         make check
 
-4.  (Optional) You can also install arenad to your path:
+4.  (Optional) You can also install ar3nad to your path:
 
         make install
 
@@ -69,7 +69,7 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 1. Make sure you installed everything through homebrew mentioned above
 2. Do a proper ./configure --with-gui=qt5 --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "arena-qt" as project name, enter src/qt as location
+4. Enter "ar3na-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."
@@ -79,11 +79,11 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 
 Creating a release build
 ------------------------
-You can ignore this section if you are building `arenad` for your own use.
+You can ignore this section if you are building `ar3nad` for your own use.
 
-arenad/arena-cli binaries are not included in the Arena-Qt.app bundle.
+ar3nad/ar3na-cli binaries are not included in the Ar3na-Qt.app bundle.
 
-If you are building `arenad` or `arena-qt` for others, your build machine should be set up
+If you are building `ar3nad` or `ar3na-qt` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -92,30 +92,30 @@ All dependencies should be compiled with these flags:
  -arch x86_64
  -isysroot $(xcode-select --print-path)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
 
-Once dependencies are compiled, see release-process.md for how the Arena-Qt.app
+Once dependencies are compiled, see release-process.md for how the Ar3na-Qt.app
 bundle is packaged and signed to create the .dmg disk image that is distributed.
 
 Running
 -------
 
-It's now available at `./arenad`, provided that you are still in the `src`
+It's now available at `./ar3nad`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./arenad` to get the filename where it should be put, or just try these
+Run `./ar3nad` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=arenarpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Arena/arena.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Arena/arena.conf"
+    echo -e "rpcuser=ar3narpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Ar3na/ar3na.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Ar3na/ar3na.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
 you can monitor its process by looking at the debug.log file, like this:
 
-    tail -f $HOME/Library/Application\ Support/Arena/debug.log
+    tail -f $HOME/Library/Application\ Support/Ar3na/debug.log
 
 Other commands:
 -------
 
-    ./arenad -daemon # to start the arena daemon.
-    ./arena-cli --help  # for a list of command-line options.
-    ./arena-cli help    # When the daemon is running, to get a list of RPC commands
+    ./ar3nad -daemon # to start the ar3na daemon.
+    ./ar3na-cli --help  # for a list of command-line options.
+    ./ar3na-cli help    # When the daemon is running, to get a list of RPC commands

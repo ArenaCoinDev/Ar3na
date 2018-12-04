@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven Arena tests.
+Utilities to generate test vectors for the data-driven Ar3na tests.
 
 Usage: 
 

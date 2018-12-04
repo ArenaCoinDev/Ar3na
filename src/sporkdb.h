@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ARENA_CSPORKDB_H
-#define ARENA_CSPORKDB_H
+#ifndef AR3NA_CSPORKDB_H
+#define AR3NA_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //ARENA_CSPORKDB_H
+#endif //AR3NA_CSPORKDB_H

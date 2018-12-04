@@ -1,7 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Arena developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -32,6 +31,10 @@
 #include <QThread>
 #include <QTime>
 #include <QStringList>
+
+#if QT_VERSION < 0x050000
+#include <QUrl>
+#endif
 
 // TODO: add a scrollback limit, as there is currently none
 // TODO: make it possible to filter out categories (esp debug messages when implemented)
@@ -72,12 +75,6 @@ public slots:
 
 signals:
     void reply(int category, const QString& command);
-
-private:
-    bool commandHasWarning(const std::string& command);
-    QString getCommandWarning(const std::string& command);
-
-    std::map<std::string, int> warningHistory; /*  Number of times each command was executed */
 };
 
 #include "rpcconsole.moc"
@@ -189,13 +186,6 @@ void RPCExecutor::request(const QString& command)
     }
     if (args.empty())
         return; // Nothing to do
-
-    if(commandHasWarning(args[0])) {
-        warningHistory[args[0]] = (warningHistory.count(args[0]) == 0 ? 1 : warningHistory[args[0]] + 1);
-        emit reply(RPCConsole::CMD_ERROR, getCommandWarning(args[0]));
-        return;
-    }
-
     try {
         std::string strPrint;
         // Convert argument list to JSON objects in method-dependent way,
@@ -228,36 +218,7 @@ void RPCExecutor::request(const QString& command)
     }
 }
 
-bool RPCExecutor::commandHasWarning(const std::string& command)
-{
-    /*  If command was executed already, return false */
-    if(warningHistory.count(command) > 0 && warningHistory.at(command) > 0) {
-        
-        return false;
-    }
-
-    return (command == "dumpprivkey" || command == "dumpwallet");
-}
-
-QString RPCExecutor::getCommandWarning(const std::string& command)
-{
-    if(command == "dumpprivkey") {
-        return "Warning: This command will print your private key! If someone\n"
-                "gains access to this key you will lose all your coins! Hackers/Scammers\n"
-                "are known to use this method. Be careful!";
-    }
-    else if(command == "dumpwallet") {
-        return "Warning: This command will dump your private keys! If someone\n"
-                "gains access to these keys you will lose all your coins! Hackers/Scammers\n"
-                "are known to use this method. Be careful!";
-    }
-    else {
-        /*  Should not happen */
-        return "Warning!";
-    }
-}
-
-RPCConsole::RPCConsole(QWidget* parent) : QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint),
+RPCConsole::RPCConsole(QWidget* parent) : QDialog(parent),
                                           ui(new Ui::RPCConsole),
                                           clientModel(0),
                                           historyPtr(0),
@@ -539,7 +500,7 @@ void RPCConsole::clear()
         "td.cmd-error { color: red; } "
         "b { color: #006060; } ");
 
-    message(CMD_REPLY, (tr("Welcome to the Arena RPC console.") + "<br>" +
+    message(CMD_REPLY, (tr("Welcome to the Ar3na RPC console.") + "<br>" +
                            tr("Use up and down arrows to navigate history, and <b>Ctrl-L</b> to clear screen.") + "<br>" +
                            tr("Type <b>help</b> for an overview of available commands.")),
         true);

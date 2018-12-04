@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/arena-config.h"
+#include "config/ar3na-config.h"
 #endif
 
 #include "optionsmodel.h"
@@ -68,10 +68,6 @@ void OptionsModel::Init()
     if (!settings.contains("strThirdPartyTxUrls"))
         settings.setValue("strThirdPartyTxUrls", "");
     strThirdPartyTxUrls = settings.value("strThirdPartyTxUrls", "").toString();
-
-    if (!settings.contains("fHideZeroBalances"))
-        settings.setValue("fHideZeroBalances", true);
-    fHideZeroBalances = settings.value("fHideZeroBalances").toBool();
 
     if (!settings.contains("fCoinControlFeatures"))
         settings.setValue("fCoinControlFeatures", false);
@@ -136,6 +132,8 @@ void OptionsModel::Init()
     // Display
     if (!settings.contains("digits"))
         settings.setValue("digits", "2");
+    if (!settings.contains("fCSSexternal"))
+        settings.setValue("fCSSexternal", false);
     if (!settings.contains("language"))
         settings.setValue("language", "");
     if (!SoftSetArg("-lang", settings.value("language").toString().toStdString()))
@@ -151,7 +149,7 @@ void OptionsModel::Reset()
 
     // Remove all entries from our QSettings object
     settings.clear();
-    resetSettings = true; // Needed in arena.cpp during shotdown to also remove the window positions
+    resetSettings = true; // Needed in ar3na.cpp during shotdown to also remove the window positions
 
     // default setting for OptionsModel::StartAtStartup - disabled
     if (GUIUtil::GetStartOnSystemStartup())
@@ -220,8 +218,6 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return settings.value("nDatabaseCache");
         case ThreadsScriptVerif:
             return settings.value("nThreadsScriptVerif");
-        case HideZeroBalances:
-            return settings.value("fHideZeroBalances");
         case Listen:
             return settings.value("fListen");
         default:
@@ -322,11 +318,6 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
                 settings.setValue("language", value);
                 setRestartRequired(true);
             }
-            break;
-        case HideZeroBalances:
-            fHideZeroBalances = value.toBool();
-            settings.setValue("fHideZeroBalances", fHideZeroBalances);
-            emit hideZeroBalancesChanged(fHideZeroBalances);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

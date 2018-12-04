@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both arenad and arena-qt, to make it harder for attackers to
+ * for both ar3nad and ar3na-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Arena Core");
+const std::string CLIENT_NAME("Ar3na Core");
 
 /**
  * Client version number
@@ -78,7 +78,7 @@ const std::string CLIENT_NAME("Arena Core");
 const std::string CLIENT_BUILD(BUILD_DESC CLIENT_VERSION_SUFFIX);
 const std::string CLIENT_DATE(BUILD_DATE);
 
-std::string FormatVersion(int nVersion)
+static std::string FormatVersion(int nVersion)
 {
     if (nVersion % 100 == 0)
         return strprintf("%d.%d.%d", nVersion / 1000000, (nVersion / 10000) % 100, (nVersion / 100) % 100);
@@ -88,11 +88,11 @@ std::string FormatVersion(int nVersion)
 
 std::string FormatFullVersion()
 {
-    return FormatVersion(CLIENT_VERSION);
+    return CLIENT_BUILD;
 }
 
-/**
- * Format the subversion field according to BIP 14 spec (https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki)
+/** 
+ * Format the subversion field according to BIP 14 spec (https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki) 
  */
 std::string FormatSubVersion(const std::string& name, int nClientVersion, const std::vector<std::string>& comments)
 {

@@ -155,7 +155,7 @@ class FrameworkInfo(object):
 class ApplicationBundleInfo(object):
     def __init__(self, path):
         self.path = path
-        appName = "Arena-Qt"
+        appName = "Ar3na-Qt"
         self.binaryPath = os.path.join(path, "Contents", "MacOS", appName)
         if not os.path.exists(self.binaryPath):
             raise RuntimeError("Could not find bundle binary for " + path)
@@ -259,10 +259,7 @@ def copyFramework(framework, path, verbose):
         #standard place for Nokia Qt installer's frameworks
         fromPath = "/Library/Frameworks/" + framework.sourceFilePath
     else:
-        if not framework.frameworkDirectory:
-            fromPath = "/usr/local/lib/" + framework.sourceFilePath
-        else:
-            fromPath = framework.sourceFilePath
+        fromPath = framework.sourceFilePath
     toDir = os.path.join(path, framework.destinationDirectory)
     toPath = os.path.join(toDir, framework.binaryName)
 
@@ -343,7 +340,7 @@ def deployFrameworks(frameworks, bundlePath, binaryPath, strip, verbose, deploym
         # install_name_tool the new id into the binary
         changeInstallName(framework.installName, framework.deployedInstallName, binaryPath, verbose)
 
-        # Copy framework to app bundle.
+        # Copy farmework to app bundle.
         deployedBinaryPath = copyFramework(framework, bundlePath, verbose)
         # Skip the rest if already was deployed.
         if deployedBinaryPath is None:
@@ -607,7 +604,7 @@ else:
 
 # ------------------------------------------------
 
-target = os.path.join("dist", "Arena-Qt.app")
+target = os.path.join("dist", "Ar3na-Qt.app")
 
 if verbose >= 2:
     print("+ Copying source bundle +")

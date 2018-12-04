@@ -1,8 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2016-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Arena developers
+// Copyright (c) 2009-2013 The Bitcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -172,9 +169,7 @@ enum {
     MSG_BUDGET_FINALIZED_VOTE,
     MSG_MASTERNODE_QUORUM,
     MSG_MASTERNODE_ANNOUNCE,
-    MSG_MASTERNODE_PING,
-    MSG_COMMUNITY_PROPOSAL,
-    MSG_COMMUNITY_VOTE
+    MSG_MASTERNODE_PING
 };
 
 #endif // BITCOIN_PROTOCOL_H

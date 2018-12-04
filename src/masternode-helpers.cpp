@@ -1,6 +1,6 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Arena developers
+// Copyright (c) 2017-2018 The Ar3na developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +20,7 @@ void ThreadMasternodePool()
     if (fLiteMode) return; //disable all Masternode related functionality
 
     // Make this thread recognisable
-    RenameThread("arena-mnpool");
+    RenameThread("ar3na-mnpool");
 
     unsigned int c = 0;
 
@@ -39,6 +39,7 @@ void ThreadMasternodePool()
 
             if (c % 60 == 0) {
                 mnodeman.CheckAndRemove();
+                mnodeman.ProcessMasternodeConnections();
                 masternodePayments.CleanPaymentList();
                 CleanTransactionLocksList();
             }

@@ -1,8 +1,3 @@
-// Copyright (c) 2017-2018 The PIVX developers
-// Copyright (c) 2017-2018 The Arena developers
-// Distributed under the MIT software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
 #include "blockexplorer.h"
 #include "bitcoinunits.h"
 #include "chainparams.h"
@@ -426,7 +421,7 @@ std::string AddressToString(const CBitcoinAddress& Address)
     TxContent += "</table>";
 
     std::string Content;
-    Content += "<h1 style='color:#333;'>" + _("Transactions to/from") + "&nbsp;<span>" + Address.ToString() + "</span></h1>";
+    Content += "<h1 style='color:#ffffff;'>" + _("Transactions to/from") + "&nbsp;<span>" + Address.ToString() + "</span></h1>";
     Content += TxContent;
     return Content;
 }
@@ -478,8 +473,8 @@ void BlockExplorer::showEvent(QShowEvent*)
         updateNavButtons();
 
         if (!GetBoolArg("-txindex", false)) {
-            QString Warning = tr("Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (arena.conf).");
-            QMessageBox::warning(this, "Arena Core Blockchain Explorer", Warning, QMessageBox::Ok);
+            QString Warning = tr("Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ar3na.conf).");
+            QMessageBox::warning(this, "Ar3na Core Blockchain Explorer", Warning, QMessageBox::Ok);
         }
     }
 }
@@ -555,8 +550,10 @@ void BlockExplorer::setBlock(CBlockIndex* pBlock)
 
 void BlockExplorer::setContent(const std::string& Content)
 {
-    QString CSS = "body {font-size:12px; color:#333; bgcolor:#fafafa;}\n a, span { font-family: monospace; }\n span.addr {color:#333; font-weight: bold;}\n table tr td {padding: 3px; border: 1px solid black; background-color: #fafafa;}\n td.d0 {font-weight: bold; color:#333;}\n h2, h3 { white-space:nowrap; color:#333;}\n a { color:#337ab7; text-decoration:none; }\n a.nav {color:#337ab7;}\n";
+    QString CSS = "body {font-size:12px; color:#f8f6f6; bgcolor:#fafafa;}\n a, span { font-family: monospace; }\n span.addr {color:#fafafa; font-weight: bold;}\n table tr td {padding: 3px; border: 1px solid black; background-color: #fafafa;}\n td.d0 {font-weight: bold; color:#f8f6f6;}\n h2, h3 { white-space:nowrap; color:#fafafa;}\n a { color:#88f6f6; text-decoration:none; }\n a.nav {color:#fafafa;}\n";
     QString FullContent = "<html><head><style type=\"text/css\">" + CSS + "</style></head>" + "<body>" + Content.c_str() + "</body></html>";
+    // printf(FullContent.toUtf8());
+
     ui->content->setText(FullContent);
 }
 

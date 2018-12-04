@@ -27,11 +27,13 @@ SendCoinsEntry::SendCoinsEntry(QWidget* parent) : QStackedWidget(parent),
 #ifdef Q_OS_MAC
     ui->payToLayout->setSpacing(4);
 #endif
+#if QT_VERSION >= 0x040700
     ui->addAsLabel->setPlaceholderText(tr("Enter a label for this address to add it to your address book"));
+#endif
 
-    // normal bitg address field
+    // normal ar3na address field
     GUIUtil::setupAddressWidget(ui->payTo, this);
-    // just a label for displaying bitg address(es)
+    // just a label for displaying ar3na address(es)
     ui->payTo_is->setFont(GUIUtil::bitcoinAddressFont());
 
     // Connect signals

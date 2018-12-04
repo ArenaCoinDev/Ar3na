@@ -168,7 +168,7 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../arena.qrc"/>
+  <include location="../ar3na.qrc"/>
  </resources>
  <connections/>
 </ui>

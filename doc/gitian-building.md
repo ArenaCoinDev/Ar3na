@@ -1,9 +1,9 @@
 Gitian building
 ================
 
-*Setup instructions for a gitian build of Arena using a Debian VM or physical system.*
+*Setup instructions for a gitian build of Ar3na using a Debian VM or physical system.*
 
-Gitian is the deterministic build process that is used to build the Arena
+Gitian is the deterministic build process that is used to build the Ar3na
 Core executables. It provides a way to be reasonably sure that the
 executables are really built from source on GitHub. It also makes sure that
 the same, tested dependencies are used and statically built into the executable.
@@ -26,7 +26,7 @@ Table of Contents
 - [Installing gitian](#installing-gitian)
 - [Setting up gitian images](#setting-up-gitian-images)
 - [Getting and building the inputs](#getting-and-building-the-inputs)
-- [Building Arena](#building-arena)
+- [Building Ar3na](#building-ar3na)
 - [Building an alternative repository](#building-an-alternative-repository)
 - [Signing externally](#signing-externally)
 - [Uploading signatures](#uploading-signatures)
@@ -277,12 +277,12 @@ cd ..
 
 **Note**: When sudo asks for a password, enter the password for the user *debian* not for *root*.
 
-Clone the git repositories for arena and gitian and then checkout the arena version that you want to build.
+Clone the git repositories for ar3na and gitian and then checkout the ar3na version that you want to build.
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/arena/arena.git
-cd arena
+git clone https://github.com/ar3na/ar3na.git
+cd ar3na
 git checkout v${VERSION}
 cd ..
 ```
@@ -321,16 +321,16 @@ There will be a lot of warnings printed during build of the images. These can be
 Getting and building the inputs
 --------------------------------
 
-Follow the instructions in [doc/release-process.md](release-process.md) in the arena repository
+Follow the instructions in [doc/release-process.md](release-process.md) in the ar3na repository
 under 'Fetch and build inputs' to install sources which require manual intervention. Also follow
 the next step: 'Seed the Gitian sources cache', which will fetch all necessary source files allowing
 for gitian to work offline.
 
-Building Arena
+Building Ar3na
 ----------------------
 
-To build Arena (for Linux, OSX and Windows) just follow the steps under 'perform
-gitian builds' in [doc/release-process.md](release-process.md) in the arena repository.
+To build Ar3na (for Linux, OSX and Windows) just follow the steps under 'perform
+gitian builds' in [doc/release-process.md](release-process.md) in the ar3na repository.
 
 This may take a long time as it also builds the dependencies needed for each descriptor.
 These dependencies will be cached after a successful build to avoid rebuilding them when possible.
@@ -345,12 +345,12 @@ tail -f var/build.log
 Output from `gbuild` will look something like
 
 ```bash
-    Initialized empty Git repository in /home/debian/gitian-builder/inputs/arena/.git/
+    Initialized empty Git repository in /home/debian/gitian-builder/inputs/ar3na/.git/
     remote: Reusing existing pack: 35606, done.
     remote: Total 35606 (delta 0), reused 0 (delta 0)
     Receiving objects: 100% (35606/35606), 26.52 MiB | 4.28 MiB/s, done.
     Resolving deltas: 100% (25724/25724), done.
-    From https://github.com/arena/arena
+    From https://github.com/ar3na/ar3na
     ... (new tags, new branch etc)
     --- Building for trusty x86_64 ---
     Stopping target if it is up
@@ -377,11 +377,11 @@ and inputs.
 
 For example:
 ```bash
-URL=https://github.com/konez2k/arena.git
+URL=https://github.com/konez2k/ar3na.git
 COMMIT=b616fb8ef0d49a919b72b0388b091aaec5849b96
-./bin/gbuild --commit arena=${COMMIT} --url arena=${URL} ../arena/contrib/gitian-descriptors/gitian-linux.yml
-./bin/gbuild --commit arena=${COMMIT} --url arena=${URL} ../arena/contrib/gitian-descriptors/gitian-win.yml
-./bin/gbuild --commit arena=${COMMIT} --url arena=${URL} ../arena/contrib/gitian-descriptors/gitian-osx.yml
+./bin/gbuild --commit ar3na=${COMMIT} --url ar3na=${URL} ../ar3na/contrib/gitian-descriptors/gitian-linux.yml
+./bin/gbuild --commit ar3na=${COMMIT} --url ar3na=${URL} ../ar3na/contrib/gitian-descriptors/gitian-win.yml
+./bin/gbuild --commit ar3na=${COMMIT} --url ar3na=${URL} ../ar3na/contrib/gitian-descriptors/gitian-osx.yml
 ```
 
 Signing externally
@@ -396,9 +396,9 @@ When you execute `gsign` you will get an error from GPG, which can be ignored. C
 in `gitian.sigs` to your signing machine and do
 
 ```bash
-    gpg --detach-sign ${VERSION}-linux/${SIGNER}/arena-build.assert
-    gpg --detach-sign ${VERSION}-win/${SIGNER}/arena-build.assert
-    gpg --detach-sign ${VERSION}-osx/${SIGNER}/arena-build.assert
+    gpg --detach-sign ${VERSION}-linux/${SIGNER}/ar3na-build.assert
+    gpg --detach-sign ${VERSION}-win/${SIGNER}/ar3na-build.assert
+    gpg --detach-sign ${VERSION}-osx/${SIGNER}/ar3na-build.assert
 ```
 
 This will create the `.sig` files that can be committed together with the `.assert` files to assert your
@@ -408,6 +408,6 @@ Uploading signatures (not yet implemented)
 ---------------------
 
 In the future it will be possible to push your signatures (both the `.assert` and `.assert.sig` files) to the
-[arena/gitian.sigs](https://github.com/arena/gitian.sigs/) repository, or if that's not possible to create a pull
+[ar3na/gitian.sigs](https://github.com/ar3na/gitian.sigs/) repository, or if that's not possible to create a pull
 request.
 There will be an official announcement when this repository is online.

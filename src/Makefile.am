@@ -1,8 +1,3 @@
-# Copyright (c) 2013-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2018 The Bicoin Green Core developers
-# Distributed under the MIT software license, see the accompanying
-# file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
 DIST_SUBDIRS = secp256k1 univalue
 AM_LDFLAGS = $(PTHREAD_CFLAGS) $(LIBTOOL_LDFLAGS)
 
@@ -77,16 +72,17 @@ bin_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += arenad
+  bin_PROGRAMS += ar3nad
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += arena-cli arena-tx
+  bin_PROGRAMS += ar3na-cli ar3na-tx
 endif
 
 .PHONY: FORCE
-# arena core #
+# ar3na core #
 BITCOIN_CORE_H = \
+  bignum.h \
   activemasternode.h \
   addrman.h \
   alert.h \
@@ -112,6 +108,8 @@ BITCOIN_CORE_H = \
   core_io.h \
   crypter.h \
   db.h \
+  eccryptoverify.h \
+  ecwrapper.h \
   hash.h \
   init.h \
   kernel.h \
@@ -128,7 +126,6 @@ BITCOIN_CORE_H = \
   masternodeman.h \
   masternodeconfig.h \
   masternode-helpers.h \
-  masternode-vote.h \
   merkleblock.h \
   miner.h \
   mruset.h \
@@ -186,7 +183,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between arenad and arena-qt
+# server: shared between ar3nad and ar3na-qt
 libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
@@ -206,7 +203,6 @@ libbitcoin_server_a_SOURCES = \
   rpcblockchain.cpp \
   rpcmasternode.cpp \
   rpcmasternode-budget.cpp \
-  rpcmasternode-vote.cpp \
   rpcmining.cpp \
   rpcmisc.cpp \
   rpcnet.cpp \
@@ -232,7 +228,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between arenad and arena-qt, but only linked
+# wallet: shared between ar3nad and ar3na-qt, but only linked
 # when wallet enabled
 
 libbitcoin_wallet_a_CFLAGS = -fPIC
@@ -250,7 +246,6 @@ libbitcoin_wallet_a_SOURCES = \
   masternodeconfig.cpp \
   masternodeman.cpp \
   masternode-helpers.cpp \
-  masternode-vote.cpp \
   rpcdump.cpp \
   rpcwallet.cpp \
   kernel.cpp \
@@ -295,7 +290,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sph_skein.h \
   crypto/sph_types.h
 
-# common: shared between arenad, and arena-qt and non-server tools
+# common: shared between ar3nad, and ar3na-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_common_a_SOURCES = \
   allocators.cpp \
@@ -309,6 +304,8 @@ libbitcoin_common_a_SOURCES = \
   primitives/transaction.cpp \
   core_read.cpp \
   core_write.cpp \
+  eccryptoverify.cpp \
+  ecwrapper.cpp \
   hash.cpp \
   key.cpp \
   keystore.cpp \
@@ -351,7 +348,7 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 libbitcoin_util_a_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-# cli: shared between arena-cli and arena-qt
+# cli: shared between ar3na-cli and ar3na-qt
 libbitcoin_cli_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
@@ -361,7 +358,7 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-arenad_LDADD = \
+ar3nad_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -372,26 +369,26 @@ arenad_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-arenad_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+ar3nad_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-arenad_LDADD += libbitcoin_wallet.a
+ar3nad_LDADD += libbitcoin_wallet.a
 endif
-arenad_SOURCES = arenad.cpp
+ar3nad_SOURCES = ar3nad.cpp
 #
 
 if TARGET_WINDOWS
-arenad_SOURCES += arenad-res.rc
+ar3nad_SOURCES += ar3nad-res.rc
 endif
 
-arenad_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-arenad_CPPFLAGS = $(BITCOIN_INCLUDES)
-arenad_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+ar3nad_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+ar3nad_CPPFLAGS = $(BITCOIN_INCLUDES)
+ar3nad_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 
-# arena-cli binary #
-arena_cli_LDADD = \
+# ar3na-cli binary #
+ar3na_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
@@ -400,14 +397,14 @@ arena_cli_LDADD = \
   $(CRYPTO_LIBS) \
   $(EVENT_LIBS)
 
-arena_cli_SOURCES = \
-  arena-cli.cpp
+ar3na_cli_SOURCES = \
+  ar3na-cli.cpp
 
-arena_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+ar3na_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 #
 
-# arena-tx binary #
-arena_tx_LDADD = \
+# ar3na-tx binary #
+ar3na_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -416,15 +413,15 @@ arena_tx_LDADD = \
   $(BOOST_LIBS) \
   $(CRYPTO_LIBS)
 
-arena_tx_SOURCES = arena-tx.cpp
-arena_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
+ar3na_tx_SOURCES = ar3na-tx.cpp
+ar3na_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
-arena_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+ar3na_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-arena_cli_SOURCES += arena-cli-res.rc
+ar3na_cli_SOURCES += ar3na-cli-res.rc
 endif
-arena_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+ar3na_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h
@@ -437,6 +434,8 @@ libbitcoinconsensus_la_SOURCES = \
   crypto/sha256.cpp \
   crypto/sha512.cpp \
   crypto/ripemd160.cpp \
+  eccryptoverify.cpp \
+  ecwrapper.cpp \
   hash.cpp \
   pubkey.cpp \
   script/script.cpp \
@@ -450,10 +449,12 @@ if GLIBC_BACK_COMPAT
   libbitcoinconsensus_la_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-libbitcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libbitcoinconsensus_la_LIBADD = $(LIBSECP256K1) $(BOOST_LIBS)
-libbitcoinconsensus_la_CPPFLAGS = -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libbitcoinconsensus_la_LDFLAGS = -no-undefined $(RELDFLAGS)
+libbitcoinconsensus_la_LIBADD = $(CRYPTO_LIBS) $(BOOST_LIBS)
+libbitcoinconsensus_la_CPPFLAGS = $(CRYPTO_CFLAGS) -I$(builddir)/obj -DBUILD_BITCOIN_INTERNAL
+if USE_LIBSECP256K1
 libbitcoinconsensus_la_LIBADD += secp256k1/libsecp256k1.la
+endif
 endif
 
 CLEANFILES = leveldb/libleveldb.a leveldb/libmemenv.a

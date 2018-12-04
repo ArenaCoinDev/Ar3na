@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Ar3na
+Comment=Ar3na P2P Cryptocurrency
+Exec=ar3na-qt %u
+Terminal=false
+Type=Application
+Icon=ar3na128
+MimeType=x-scheme-handler/ar3na;
+Categories=Office;Finance;
+Name[en_US]=ar3na-qt.desktop

@@ -103,7 +103,7 @@ void FreespaceChecker::check()
 }
 
 
-Intro::Intro(QWidget* parent) : QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint),
+Intro::Intro(QWidget* parent) : QDialog(parent),
                                 ui(new Ui::Intro),
                                 thread(0),
                                 signalled(false)
@@ -174,7 +174,7 @@ bool Intro::pickDataDirectory()
                 TryCreateDirectory(GUIUtil::qstringToBoostPath(dataDir));
                 break;
             } catch (fs::filesystem_error& e) {
-                QMessageBox::critical(0, tr("Arena Core"),
+                QMessageBox::critical(0, tr("Ar3na Core"),
                     tr("Error: Specified data directory \"%1\" cannot be created.").arg(dataDir));
                 /* fall through, back to choosing screen */
             }
@@ -183,8 +183,8 @@ bool Intro::pickDataDirectory()
         settings.setValue("strDataDir", dataDir);
     }
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the arena.conf file in the default data directory
-     * (to be consistent with arenad behavior)
+     * override -datadir in the ar3na.conf file in the default data directory
+     * (to be consistent with ar3nad behavior)
      */
     if (dataDir != getDefaultDataDirectory())
         SoftSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting

@@ -1,0 +1,26 @@
+# /etc/conf.d/ar3nad: config file for /etc/init.d/ar3nad
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/ar3na/ar3na.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/ar3nad"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/ar3nad.pid"
+
+# Where to write ar3nad data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/ar3nad"
+
+# User and group to own ar3nad process
+#BITCOIND_USER="ar3na"
+#BITCOIND_GROUP="ar3na"
+
+# Path to ar3nad executable
+#BITCOIND_BIN="/usr/bin/ar3nad"
+
+# Nice value to run ar3nad under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

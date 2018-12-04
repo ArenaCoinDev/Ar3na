@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between arena-cli and arenad)
- * of a given instance of the Arena system.
+ * CBaseChainParams defines the base parameters (shared between ar3na-cli and ar3nad)
+ * of a given instance of the Ar3na system.
  */
 class CBaseChainParams
 {

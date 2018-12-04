@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/ar3na_bg.qm</file>
+        <file alias="ca">locale/ar3na_ca.qm</file>
+        <file alias="cs">locale/ar3na_cs.qm</file>
+        <file alias="da">locale/ar3na_da.qm</file>
+        <file alias="de">locale/ar3na_de.qm</file>
+        <file alias="en">locale/ar3na_en.qm</file>
+        <file alias="en_US">locale/ar3na_en_US.qm</file>
+        <file alias="es">locale/ar3na_es.qm</file>
+        <file alias="fi">locale/ar3na_fi.qm</file>
+        <file alias="fr_FR">locale/ar3na_fr_FR.qm</file>
+        <file alias="it">locale/ar3na_it.qm</file>
+        <file alias="ja">locale/ar3na_ja.qm</file>
+        <file alias="ko_KR">locale/ar3na_ko_KR.qm</file>
+        <file alias="nl">locale/ar3na_nl.qm</file>
+        <file alias="pl">locale/ar3na_pl.qm</file>
+        <file alias="pt">locale/ar3na_pt.qm</file>
+        <file alias="pt_BR">locale/ar3na_pt_BR.qm</file>
+        <file alias="ro_RO">locale/ar3na_ro_RO.qm</file>
+        <file alias="ru">locale/ar3na_ru.qm</file>
+        <file alias="sk">locale/ar3na_sk.qm</file>
+        <file alias="sv">locale/ar3na_sv.qm</file>
+        <file alias="tr">locale/ar3na_tr.qm</file>
+        <file alias="uk">locale/ar3na_uk.qm</file>
+        <file alias="zh_CN">locale/ar3na_zh_CN.qm</file>
+        <file alias="zh_TW">locale/ar3na_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2017 The Arena developers
+// Copyright (c) 2017-2017 The Ar3na developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -42,11 +42,11 @@ QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
     case AR3NA:
-        return QString("bitg");
+        return QString("ar3na");
     case mAR3NA:
-        return QString("mbitg");
+        return QString("mar3na");
     case uAR3NA:
-        return QString::fromUtf8("ubitg");
+        return QString::fromUtf8("uar3na");
     default:
         return QString("???");
     }

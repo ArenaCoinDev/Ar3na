@@ -1,4 +1,4 @@
-Building Arena
+Building Ar3na
 
 Use the autogen script to prepare the build environment.
 
@@ -8,6 +8,6 @@ Use the autogen script to prepare the build environment.
 
 Always verify the signatures and checksums.
 
-See doc/build-*.md for instructions on building arenad,
+See doc/build-*.md for instructions on building ar3nad,
 the intended-for-services, no-graphical-interface, reference
-implementation of Arena.
+implementation of Ar3na.

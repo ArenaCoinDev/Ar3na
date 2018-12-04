@@ -5,7 +5,7 @@
 #include "random.h"
 #include "scheduler.h"
 #if defined(HAVE_CONFIG_H)
-#include "config/arena-config.h"
+#include "config/ar3na-config.h"
 #else
 #define HAVE_WORKING_BOOST_SLEEP_FOR
 #endif

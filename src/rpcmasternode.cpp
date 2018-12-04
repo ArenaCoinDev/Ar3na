@@ -79,7 +79,7 @@ UniValue masternode(const UniValue& params, bool fHelp)
             "  debug        - Print masternode status\n"
             "  genkey       - Generate new masternodeprivkey\n"
             "  outputs      - Print masternode compatible outputs\n"
-            "  start        - Start masternode configured in arena.conf\n"
+            "  start        - Start masternode configured in ar3na.conf\n"
             "  start-alias  - Start single masternode by assigned alias configured in masternode.conf\n"
             "  start-<mode> - Start masternodes configured in masternode.conf (<mode>: 'all', 'missing', 'disabled')\n"
             "  status       - Print masternode status information\n"
@@ -223,7 +223,7 @@ UniValue listmasternodes(const UniValue& params, bool fHelp)
             "  ,...\n"
             "]\n"
             "\nExamples:\n" +
-            HelpExampleCli("listmasternodes", "") + HelpExampleRpc("listmasternodes", ""));
+            HelpExampleCli("masternodelist", "") + HelpExampleRpc("masternodelist", ""));
 
     UniValue ret(UniValue::VARR);
     int nHeight;
@@ -283,7 +283,7 @@ UniValue masternodeconnect(const UniValue& params, bool fHelp)
             "1. \"address\"     (string, required) IP or net address to connect to\n"
 
             "\nExamples:\n" +
-            HelpExampleCli("masternodeconnect", "\"192.168.0.6:9333\"") + HelpExampleRpc("masternodeconnect", "\"192.168.0.6:9333\""));
+            HelpExampleCli("masternodeconnect", "\"192.168.0.6:27750\"") + HelpExampleRpc("masternodeconnect", "\"192.168.0.6:27750\""));
 
     std::string strAddress = params[0].get_str();
 
@@ -384,7 +384,7 @@ UniValue masternodedebug (const UniValue& params, bool fHelp)
         return activeMasternode.GetStatus();
 
     CTxIn vin = CTxIn();
-    CPubKey pubkey;
+    CPubKey pubkey = CScript();
     CKey key;
     if (!activeMasternode.GetMasterNodeVin(vin, pubkey, key))
         throw runtime_error("Missing masternode input, please look at the documentation for instructions on masternode creation\n");
@@ -439,10 +439,11 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
 
     bool fLock = (params[1].get_str() == "true" ? true : false);
 
-    EnsureWalletIsUnlocked();
-
     if (strCommand == "local") {
         if (!fMasterNode) throw runtime_error("you must set masternode=1 in the configuration\n");
+
+        if (pwalletMain->IsLocked())
+            throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Please enter the wallet passphrase with walletpassphrase first.");
 
         if (activeMasternode.status != ACTIVE_MASTERNODE_STARTED) {
             activeMasternode.status = ACTIVE_MASTERNODE_INITIAL; // TODO: consider better way
@@ -479,14 +480,13 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
                 continue;
             CTxIn vin = CTxIn(uint256(mne.getTxHash()), uint32_t(nIndex));
             CMasternode* pmn = mnodeman.Find(vin);
-            CMasternodeBroadcast mnb;
 
             if (pmn != NULL) {
                 if (strCommand == "missing") continue;
                 if (strCommand == "disabled" && pmn->IsEnabled()) continue;
             }
 
-            bool result = activeMasternode.CreateBroadcast(mne.getIp(), mne.getPrivKey(), mne.getTxHash(), mne.getOutputIndex(), errorMessage, mnb);
+            bool result = activeMasternode.Register(mne.getIp(), mne.getPrivKey(), mne.getTxHash(), mne.getOutputIndex(), errorMessage);
 
             UniValue statusObj(UniValue::VOBJ);
             statusObj.push_back(Pair("alias", mne.getAlias()));
@@ -515,6 +515,9 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
     if (strCommand == "alias") {
         std::string alias = params[2].get_str();
 
+        if (pwalletMain->IsLocked())
+            throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Please enter the wallet passphrase with walletpassphrase first.");
+
         bool found = false;
         int successful = 0;
         int failed = 0;
@@ -523,27 +526,24 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
         UniValue statusObj(UniValue::VOBJ);
         statusObj.push_back(Pair("alias", alias));
 
-        for (CMasternodeConfig::CMasternodeEntry mne : masternodeConfig.getEntries()) {
-            if (mne.getAlias() != alias)
-                continue;
+        BOOST_FOREACH (CMasternodeConfig::CMasternodeEntry mne, masternodeConfig.getEntries()) {
+            if (mne.getAlias() == alias) {
+                found = true;
+                std::string errorMessage;
 
-            found = true;
-            std::string errorMessage;
-            CMasternodeBroadcast mnb;
+                bool result = activeMasternode.Register(mne.getIp(), mne.getPrivKey(), mne.getTxHash(), mne.getOutputIndex(), errorMessage);
 
-            bool result = activeMasternode.CreateBroadcast(mne.getIp(), mne.getPrivKey(), mne.getTxHash(), mne.getOutputIndex(), errorMessage, mnb);
+                statusObj.push_back(Pair("result", result ? "successful" : "failed"));
 
-            statusObj.push_back(Pair("result", result ? "successful" : "failed"));
-
-            if (result) {
-                successful++;
-                mnodeman.UpdateMasternodeList(mnb);
-                mnb.Relay();
-            } else {
-                failed++;
-                statusObj.push_back(Pair("errorMessage", errorMessage));
+                if (result) {
+                    successful++;
+                    statusObj.push_back(Pair("error", ""));
+                } else {
+                    failed++;
+                    statusObj.push_back(Pair("error", errorMessage));
+                }
+                break;
             }
-            break;
         }
 
         if (!found) {
@@ -787,7 +787,7 @@ UniValue getmasternodewinners (const UniValue& params, bool fHelp)
             UniValue winner(UniValue::VARR);
             boost::char_separator<char> sep(",");
             boost::tokenizer< boost::char_separator<char> > tokens(strPayment, sep);
-            for (const string& t : tokens) {
+            BOOST_FOREACH (const string& t, tokens) {
                 UniValue addr(UniValue::VOBJ);
                 std::size_t pos = t.find(":");
                 std::string strAddress = t.substr(0,pos);
@@ -812,7 +812,7 @@ UniValue getmasternodewinners (const UniValue& params, bool fHelp)
             obj.push_back(Pair("winner", winner));
         }
 
-        ret.push_back(obj);
+            ret.push_back(obj);
     }
 
     return ret;

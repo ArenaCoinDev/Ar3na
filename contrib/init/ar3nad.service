@@ -1,0 +1,26 @@
+[Unit]
+Description=Ar3na's distributed currency daemon
+After=network.target
+
+[Service]
+User=ar3na
+Group=ar3na
+
+Type=forking
+PIDFile=/var/lib/ar3nad/ar3nad.pid
+
+ExecStart=/usr/bin/ar3nad -daemon -pid=/var/lib/ar3nad/ar3nad.pid \
+          -conf=/etc/ar3na/ar3na.conf -datadir=/var/lib/ar3nad
+
+ExecStop=-/usr/bin/ar3na-cli -conf=/etc/ar3na/ar3na.conf \
+         -datadir=/var/lib/ar3nad stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

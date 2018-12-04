@@ -5,7 +5,7 @@ UNSIGNED=$1
 SIGNATURE=$2
 ARCH=x86_64
 ROOTDIR=dist
-BUNDLE=${ROOTDIR}/Arena-Qt.app
+BUNDLE=${ROOTDIR}/Ar3na-Qt.app
 TEMPDIR=signed.temp
 OUTDIR=signed-app
 

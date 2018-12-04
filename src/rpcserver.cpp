@@ -41,7 +41,7 @@ static std::string rpcWarmupStatus("RPC server started");
 static CCriticalSection cs_rpcWarmup;
 
 //! These are created by StartRPCThreads, destroyed in StopRPCThreads
-static boost::asio::io_service* rpc_io_service = NULL;
+static asio::io_service* rpc_io_service = NULL;
 static map<string, boost::shared_ptr<deadline_timer> > deadlineTimers;
 static ssl::context* rpc_ssl_context = NULL;
 static boost::thread_group* rpc_worker_group = NULL;
@@ -242,10 +242,10 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Arena server.");
+            "\nStop Ar3na server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "Arena server stopping";
+    return "Ar3na server stopping";
 }
 
 
@@ -327,40 +327,33 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* Arena features */
-        {"arena", "masternode", &masternode, true, true, false},
-        {"arena", "listmasternodes", &listmasternodes, true, true, false},
-        {"arena", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"arena", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"arena", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"arena", "masternodedebug", &masternodedebug, true, true, false},
-        {"arena", "startmasternode", &startmasternode, true, true, false},
-        {"arena", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"arena", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"arena", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"arena", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"arena", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"arena", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"arena", "mnbudget", &mnbudget, true, true, false},
-        {"arena", "preparebudget", &preparebudget, true, true, false},
-        {"arena", "submitbudget", &submitbudget, true, true, false},
-        {"arena", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"arena", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"arena", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"arena", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"arena", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"arena", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"arena", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"arena", "checkbudgets", &checkbudgets, true, true, false},
-        {"arena", "mnsync", &mnsync, true, true, false},
-        {"arena", "spork", &spork, true, true, false},
-        {"arena", "preparecommunityproposal", &preparecommunityproposal, true, true, false},
-        {"arena", "submitcommunityproposal", &submitcommunityproposal, true, true, false},
-        {"arena", "getcommunityinfo", &getcommunityinfo, true, true, false},
-        {"arena", "checkcommunityproposals", &checkcommunityproposals, true, true, false},
-        {"arena", "getcommunityproposalvotes", &getcommunityproposalvotes, true, true, false},
-        {"arena", "mncommunityvote", &mncommunityvote, true, true, false},
-
+        /* Ar3na features */
+        {"ar3na", "masternode", &masternode, true, true, false},
+        {"ar3na", "listmasternodes", &listmasternodes, true, true, false},
+        {"ar3na", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"ar3na", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"ar3na", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"ar3na", "masternodedebug", &masternodedebug, true, true, false},
+        {"ar3na", "startmasternode", &startmasternode, true, true, false},
+        {"ar3na", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"ar3na", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"ar3na", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"ar3na", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"ar3na", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"ar3na", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"ar3na", "mnbudget", &mnbudget, true, true, false},
+        {"ar3na", "preparebudget", &preparebudget, true, true, false},
+        {"ar3na", "submitbudget", &submitbudget, true, true, false},
+        {"ar3na", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"ar3na", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"ar3na", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"ar3na", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"ar3na", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"ar3na", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"ar3na", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"ar3na", "checkbudgets", &checkbudgets, true, true, false},
+        {"ar3na", "mnsync", &mnsync, true, true, false},
+        {"ar3na", "spork", &spork, true, true, false},
 #ifdef ENABLE_WALLET
 
         /* Wallet */
@@ -489,7 +482,7 @@ class AcceptedConnectionImpl : public AcceptedConnection
 {
 public:
     AcceptedConnectionImpl(
-        boost::asio::io_service& io_service,
+        asio::io_service& io_service,
         ssl::context& context,
         bool fUseSSL) : sslStream(io_service, context),
                         _d(sslStream, fUseSSL),
@@ -513,18 +506,18 @@ public:
     }
 
     typename Protocol::endpoint peer;
-    boost::asio::ssl::stream<typename Protocol::socket> sslStream;
+    asio::ssl::stream<typename Protocol::socket> sslStream;
 
 private:
     SSLIOStreamDevice<Protocol> _d;
-    boost::iostreams::stream< SSLIOStreamDevice<Protocol> > _stream;
+    iostreams::stream<SSLIOStreamDevice<Protocol> > _stream;
 };
 
 void ServiceConnection(AcceptedConnection* conn);
 
 //! Forward declaration required for RPCListen
-template <typename Protocol>
-static void RPCAcceptHandler(boost::shared_ptr<basic_socket_acceptor<Protocol> > acceptor,
+template <typename Protocol, typename SocketAcceptorService>
+static void RPCAcceptHandler(boost::shared_ptr<basic_socket_acceptor<Protocol, SocketAcceptorService> > acceptor,
     ssl::context& context,
     bool fUseSSL,
     boost::shared_ptr<AcceptedConnection> conn,
@@ -533,18 +526,18 @@ static void RPCAcceptHandler(boost::shared_ptr<basic_socket_acceptor<Protocol> >
 /**
  * Sets up I/O resources to accept and handle a new connection.
  */
-template <typename Protocol>
-static void RPCListen(boost::shared_ptr<basic_socket_acceptor<Protocol> > acceptor,
+template <typename Protocol, typename SocketAcceptorService>
+static void RPCListen(boost::shared_ptr<basic_socket_acceptor<Protocol, SocketAcceptorService> > acceptor,
     ssl::context& context,
     const bool fUseSSL)
 {
     // Accept connection
-    boost::shared_ptr< AcceptedConnectionImpl<Protocol> > conn(new AcceptedConnectionImpl<Protocol>(acceptor->get_io_service(), context, fUseSSL));
+    boost::shared_ptr<AcceptedConnectionImpl<Protocol> > conn(new AcceptedConnectionImpl<Protocol>(acceptor->get_io_service(), context, fUseSSL));
 
     acceptor->async_accept(
         conn->sslStream.lowest_layer(),
         conn->peer,
-        boost::bind(&RPCAcceptHandler<Protocol>,
+        boost::bind(&RPCAcceptHandler<Protocol, SocketAcceptorService>,
             acceptor,
             boost::ref(context),
             fUseSSL,
@@ -556,15 +549,15 @@ static void RPCListen(boost::shared_ptr<basic_socket_acceptor<Protocol> > accept
 /**
  * Accept and handle incoming connection.
  */
-template <typename Protocol>
-static void RPCAcceptHandler(boost::shared_ptr<basic_socket_acceptor<Protocol> > acceptor,
+template <typename Protocol, typename SocketAcceptorService>
+static void RPCAcceptHandler(boost::shared_ptr<basic_socket_acceptor<Protocol, SocketAcceptorService> > acceptor,
     ssl::context& context,
     const bool fUseSSL,
     boost::shared_ptr<AcceptedConnection> conn,
     const boost::system::error_code& error)
 {
     // Immediately start accepting new connections, except when we're cancelled or our socket is closed.
-    if (error != boost::asio::error::operation_aborted && acceptor->is_open())
+    if (error != asio::error::operation_aborted && acceptor->is_open())
         RPCListen(acceptor, context, fUseSSL);
 
     AcceptedConnectionImpl<ip::tcp>* tcp_conn = dynamic_cast<AcceptedConnectionImpl<ip::tcp>*>(conn.get());
@@ -633,8 +626,8 @@ void StartRPCThreads()
     }
 
     assert(rpc_io_service == NULL);
-    rpc_io_service = new boost::asio::io_service();
-    rpc_ssl_context = new ssl::context(ssl::context::sslv23);
+    rpc_io_service = new asio::io_service();
+    rpc_ssl_context = new ssl::context(*rpc_io_service, ssl::context::sslv23);
 
     const bool fUseSSL = GetBoolArg("-rpcssl", false);
 
@@ -656,7 +649,7 @@ void StartRPCThreads()
             LogPrintf("ThreadRPCServer ERROR: missing server private key file %s\n", pathPKFile.string());
 
         string strCiphers = GetArg("-rpcsslciphers", "TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH");
-        SSL_CTX_set_cipher_list(rpc_ssl_context->native_handle(), strCiphers.c_str());
+        SSL_CTX_set_cipher_list(rpc_ssl_context->impl(), strCiphers.c_str());
     }
 
     std::vector<ip::tcp::endpoint> vEndpoints;
@@ -1077,14 +1070,14 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> arena-cli " + methodname + " " + args + "\n";
+    return "> ar3na-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)
 {
     return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", "
            "\"method\": \"" +
-           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:9332/\n";
+           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:27751/\n";
 }
 
 const CRPCTable tableRPC;

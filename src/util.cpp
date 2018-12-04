@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/arena-config.h"
+#include "config/ar3na-config.h"
 #endif
 
 #include "util.h"
@@ -105,7 +105,7 @@ std::string to_internal(const std::string&);
 
 using namespace std;
 
-// Arena only features
+// Ar3na only features
 // Masternode
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
@@ -133,7 +133,7 @@ volatile bool fReopenDebugLog = false;
 
 /** Init OpenSSL library multithreading support */
 static CCriticalSection** ppmutexOpenSSL;
-void locking_callback(int mode, int i, const char* file, int line) NO_THREAD_SAFETY_ANALYSIS
+void locking_callback(int mode, int i, const char* file, int line)
 {
     if (mode & CRYPTO_LOCK) {
         ENTER_CRITICAL_SECTION(*ppmutexOpenSSL[i]);
@@ -227,13 +227,12 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "arena" is a composite category enabling all Arena-related debug output
-            if (ptrCategory->count(string("arena"))) {
+            // "ar3na" is a composite category enabling all Ar3na-related debug output
+            if (ptrCategory->count(string("ar3na"))) {
                 ptrCategory->insert(string("swifttx"));
                 ptrCategory->insert(string("masternode"));
                 ptrCategory->insert(string("mnpayments"));
                 ptrCategory->insert(string("mnbudget"));
-                ptrCategory->insert(string("mncommunityvote"));
             }
         }
         const set<string>& setCategories = *ptrCategory.get();
@@ -392,7 +391,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "arena";
+    const char* pszModule = "ar3na";
 #endif
     if (pex)
         return strprintf(
@@ -413,13 +412,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\Arena
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\Arena
-// Mac: ~/Library/Application Support/Arena
-// Unix: ~/.arena
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\Ar3na
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\Ar3na
+// Mac: ~/Library/Application Support/Ar3na
+// Unix: ~/.ar3na
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Arena";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Ar3na";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -431,10 +430,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "Arena";
+    return pathRet / "Ar3na";
 #else
     // Unix
-    return pathRet / ".arena";
+    return pathRet / ".ar3na";
 #endif
 #endif
 }
@@ -481,7 +480,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "arena.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "ar3na.conf"));
     if (!pathConfigFile.is_complete())
         pathConfigFile = GetDataDir(false) / pathConfigFile;
 
@@ -500,7 +499,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()) {
-        // Create empty arena.conf if it does not exist
+        // Create empty ar3na.conf if it does not exist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
         if (configFile != NULL)
             fclose(configFile);
@@ -511,7 +510,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
     setOptions.insert("*");
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it) {
-        // Don't overwrite existing settings so command line settings override arena.conf
+        // Don't overwrite existing settings so command line settings override ar3na.conf
         string strKey = string("-") + it->string_key;
         string strValue = it->value[0];
         InterpretNegativeSetting(strKey, strValue);
@@ -526,7 +525,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 #ifndef WIN32
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "arenad.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "ar3nad.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }

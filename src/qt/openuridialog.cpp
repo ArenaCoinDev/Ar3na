@@ -12,11 +12,13 @@
 
 #include <QUrl>
 
-OpenURIDialog::OpenURIDialog(QWidget* parent) : QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint),
+OpenURIDialog::OpenURIDialog(QWidget* parent) : QDialog(parent),
                                                 ui(new Ui::OpenURIDialog)
 {
     ui->setupUi(this);
-    ui->uriEdit->setPlaceholderText("arena:");
+#if QT_VERSION >= 0x040700
+    ui->uriEdit->setPlaceholderText("ar3na:");
+#endif
 }
 
 OpenURIDialog::~OpenURIDialog()
@@ -46,5 +48,5 @@ void OpenURIDialog::on_selectFileButton_clicked()
     if (filename.isEmpty())
         return;
     QUrl fileUri = QUrl::fromLocalFile(filename);
-    ui->uriEdit->setText("arena:?r=" + QUrl::toPercentEncoding(fileUri.toString()));
+    ui->uriEdit->setText("ar3na:?r=" + QUrl::toPercentEncoding(fileUri.toString()));
 }

@@ -1,7 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Arena developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -908,12 +907,6 @@ public:
     {
         this->nSize += nSize;
         return *this;
-    }
-
-    /** Pretend _nSize bytes are written, without specifying them. */
-    void seek(size_t _nSize)
-    {
-        this->nSize += _nSize;
     }
 
     template <typename T>

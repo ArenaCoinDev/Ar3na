@@ -1,37 +1,33 @@
-# Copyright (c) 2013-2016 The Bitcoin Core developers
-# Distributed under the MIT software license, see the accompanying
-# file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
-bin_PROGRAMS += qt/arena-qt
+bin_PROGRAMS += qt/ar3na-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
-# arena qt core #
+# ar3na qt core #
 QT_TS = \
-  qt/locale/arena_bg.ts \
-  qt/locale/arena_ca.ts \
-  qt/locale/arena_cs.ts \
-  qt/locale/arena_da.ts \
-  qt/locale/arena_de.ts \
-  qt/locale/arena_en.ts \
-  qt/locale/arena_en_US.ts \
-  qt/locale/arena_es.ts \
-  qt/locale/arena_fi.ts \
-  qt/locale/arena_fr_FR.ts \
-  qt/locale/arena_it.ts \
-  qt/locale/arena_ja.ts \
-  qt/locale/arena_ko_KR.ts \
-  qt/locale/arena_nl.ts \
-  qt/locale/arena_pl.ts \
-  qt/locale/arena_pt.ts \
-  qt/locale/arena_pt_BR.ts \
-  qt/locale/arena_ro_RO.ts \
-  qt/locale/arena_ru.ts \
-  qt/locale/arena_sk.ts \
-  qt/locale/arena_sv.ts \
-  qt/locale/arena_tr.ts \
-  qt/locale/arena_uk.ts \
-  qt/locale/arena_zh_CN.ts \
-  qt/locale/arena_zh_TW.ts
+  qt/locale/ar3na_bg.ts \
+  qt/locale/ar3na_ca.ts \
+  qt/locale/ar3na_cs.ts \
+  qt/locale/ar3na_da.ts \
+  qt/locale/ar3na_de.ts \
+  qt/locale/ar3na_en.ts \
+  qt/locale/ar3na_en_US.ts \
+  qt/locale/ar3na_es.ts \
+  qt/locale/ar3na_fi.ts \
+  qt/locale/ar3na_fr_FR.ts \
+  qt/locale/ar3na_it.ts \
+  qt/locale/ar3na_ja.ts \
+  qt/locale/ar3na_ko_KR.ts \
+  qt/locale/ar3na_nl.ts \
+  qt/locale/ar3na_pl.ts \
+  qt/locale/ar3na_pt.ts \
+  qt/locale/ar3na_pt_BR.ts \
+  qt/locale/ar3na_ro_RO.ts \
+  qt/locale/ar3na_ru.ts \
+  qt/locale/ar3na_sk.ts \
+  qt/locale/ar3na_sv.ts \
+  qt/locale/ar3na_tr.ts \
+  qt/locale/ar3na_uk.ts \
+  qt/locale/ar3na_zh_CN.ts \
+  qt/locale/ar3na_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -111,16 +107,16 @@ BITCOIN_MM = \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/arena.moc \
+  qt/ar3na.moc \
   qt/bitcoinamountfield.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_arena.cpp
-QT_QRC = qt/arena.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_arena_locale.cpp
-QT_QRC_LOCALE = qt/arena_locale.qrc
+QT_QRC_CPP = qt/qrc_ar3na.cpp
+QT_QRC = qt/ar3na.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_ar3na_locale.cpp
+QT_QRC_LOCALE = qt/ar3na_locale.qrc
 
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
@@ -186,7 +182,6 @@ BITCOIN_QT_H = \
 RES_ICONS = \
   qt/res/icons/add.png \
   qt/res/icons/address-book.png \
-  qt/res/icons/address-book_black.png \
   qt/res/icons/bitcoin.ico \
   qt/res/icons/bitcoin.png \
   qt/res/icons/bitcoin_testnet.ico \
@@ -205,10 +200,8 @@ RES_ICONS = \
   qt/res/icons/connect4_16.png \
   qt/res/icons/debugwindow.png \
   qt/res/icons/edit.png \
-  qt/res/icons/edit_black.png \
   qt/res/icons/editcopy.png \
   qt/res/icons/editpaste.png \
-  qt/res/icons/editpaste_black.png \
   qt/res/icons/explorer.png \
   qt/res/icons/export.png \
   qt/res/icons/eye.png \
@@ -229,27 +222,24 @@ RES_ICONS = \
   qt/res/icons/receive.png \
   qt/res/icons/receive_active.png \
   qt/res/icons/remove.png \
-  qt/res/icons/remove_black.png \
   qt/res/icons/send.png \
   qt/res/icons/send_active.png \
-  qt/res/icons/send_black.png \
   qt/res/icons/staking_active.png \
   qt/res/icons/staking_inactive.png \
   qt/res/icons/synced.png \
   qt/res/icons/transaction0.png \
   qt/res/icons/transaction2.png \
-  qt/res/icons/transaction_black.png \
   qt/res/icons/transaction_conflicted.png \
   qt/res/icons/tx_inout.png \
   qt/res/icons/tx_input.png \
   qt/res/icons/tx_output.png \
   qt/res/icons/tx_mined.png \
-  qt/res/icons/unit_bitg.png \
-  qt/res/icons/unit_mbitg.png \
-  qt/res/icons/unit_ubitg.png \
-  qt/res/icons/unit_tbitg.png \
-  qt/res/icons/unit_tmbitg.png \
-  qt/res/icons/unit_tubitg.png
+  qt/res/icons/unit_ar3na.png \
+  qt/res/icons/unit_mar3na.png \
+  qt/res/icons/unit_uar3na.png \
+  qt/res/icons/unit_tar3na.png \
+  qt/res/icons/unit_tmar3na.png \
+  qt/res/icons/unit_tuar3na.png
 
 BITCOIN_QT_CPP = \
   qt/bitcoinaddressvalidator.cpp \
@@ -313,7 +303,7 @@ BITCOIN_QT_CPP += \
 endif
 
 RES_IMAGES = \
-  qt/res/images/arena_logo_horizontal.png \
+  qt/res/images/ar3na_logo_horizontal.png \
   qt/res/images/about.png \
   qt/res/images/splash.png \
   qt/res/images/splash_testnet.png \
@@ -331,7 +321,7 @@ RES_CSS = \
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
-BITCOIN_RC = qt/res/arena-qt-res.rc
+BITCOIN_RC = qt/res/ar3na-qt-res.rc
 
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms
@@ -351,69 +341,69 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_arena_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_ar3na_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# arena-qt binary #
-qt_arena_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# ar3na-qt binary #
+qt_ar3na_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_arena_qt_SOURCES = qt/arena.cpp
+qt_ar3na_qt_SOURCES = qt/ar3na.cpp
 if TARGET_DARWIN
-  qt_arena_qt_SOURCES += $(BITCOIN_MM)
+  qt_ar3na_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_arena_qt_SOURCES += $(BITCOIN_RC)
+  qt_ar3na_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_arena_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_ar3na_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_arena_qt_LDADD += $(LIBBITCOIN_WALLET)
+qt_ar3na_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_arena_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+qt_ar3na_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_arena_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
+qt_ar3na_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_arena_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_arena_qt_LIBTOOLFLAGS = --tag CXX
+qt_ar3na_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_ar3na_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 .SECONDARY: $(QT_QM)
 
-qt/arenastrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
+qt/ar3nastrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: qt/arenastrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: qt/ar3nastrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/arena_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/ar3na_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@test -f $(@D)/$(<F) || cp -f $< $(@D)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name arena_locale $(@D)/$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name ar3na_locale $(@D)/$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name arena $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name ar3na $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
 
 CLEANFILES += $(CLEAN_QT)
 
-arena_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_arena_qt_OBJECTS) qt/arena-qt$(EXEEXT) $(LIBBITCOINQT)
+ar3na_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_ar3na_qt_OBJECTS) qt/ar3na-qt$(EXEEXT) $(LIBBITCOINQT)
 
-arena_qt : qt/arena-qt$(EXEEXT)
+ar3na_qt : qt/ar3na-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

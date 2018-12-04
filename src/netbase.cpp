@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifdef HAVE_CONFIG_H
-#include "config/arena-config.h"
+#include "config/ar3na-config.h"
 #endif
 
 #include "netbase.h"

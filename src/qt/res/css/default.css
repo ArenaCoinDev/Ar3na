@@ -21,8 +21,7 @@
 /****************************************************************************************/
 
 WalletFrame {
-	background-image: url(':/images/walletFrame') no-repeat fixed;
-	background-position: left bottom;
+	border-image: url(':/images/walletFrame') 0 0 0 0 stretch stretch;
 	border-top: 0px solid #000;
 	margin: 0;
 	padding: 0;
@@ -150,7 +149,7 @@ QGroupBox {
 QToolTip {
 	background-color:#fff;
 	color:#333;
-	border: 1px solid #333;
+	border-style: none;
 }
 
 /****************************************************************************************/
@@ -233,11 +232,6 @@ QPushButton:hover {
 QPushButton:pressed {
 	background-color: #004000;
 	border:1px solid #000000;
-}
-
-QPushButton:disabled{
-  border:1px solid #aaaaaa;
-	background-color:#bbbbbb;
 }
 
 /* Special handling for statusbar-icons (which are partly QPushButtons) */
@@ -704,9 +698,7 @@ QWidget#AddressBookPage QHeaderView::section { /* Min width for Windows fix */
 /**************************** SETTINGS MENU *********************************************/
 
 /* Encrypt Wallet and Change Passphrase Dialog */
-QDialog#AskPassphraseDialog QLabel#passLabel1,
-QDialog#AskPassphraseDialog QLabel#passLabel2,
-QDialog#AskPassphraseDialog QLabel#passLabel3 {
+QDialog#AskPassphraseDialog QLabel#passLabel1, QDialog#AskPassphraseDialog QLabel#passLabel2, QDialog#AskPassphraseDialog QLabel#passLabel3 {
 	qproperty-alignment: 'AlignVCenter | AlignRight';
 }
 
@@ -808,12 +800,12 @@ QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScroll
 	border:0;
 }
 
-/* About Arena Dialog */
-QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Arena Contents */
+/* About Ar3na Dialog */
+QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Ar3na Contents */
 	margin-left:10px;
 }
 
-QDialog#AboutDialog QLabel#label_2 { /* Margin for About Arena text */
+QDialog#AboutDialog QLabel#label_2 { /* Margin for About Ar3na text */
 	margin-right:10px;
 }
 
@@ -840,7 +832,7 @@ QLabel#labelOverviewHeaderLeft {
 
 QLabel#labelOverviewHeaderRight {
 	qproperty-alignment: 'AlignVCenter | AlignRight';
-	background-image: url(':/images/arena_logo_horizontal');
+	background-image: url(':/images/ar3na_logo_horizontal');
 	background-repeat: no-repeat;
 }
 
@@ -886,7 +878,7 @@ QWidget .QFrame#frameBalances .QLabel#labelWalletStatus { /* Wallet Sync Status 
 	margin-left: 3px;
 }
 
-QWidget .QFrame#frameBalances .QLabel#labelPending, /* Pending Balance */
+QWidget .QFrame#frameBalances .QLabel#labelUnconfirmed, /* Pending Balance */
 QWidget .QFrame#frameBalances .QLabel#labelImmature { /* Immature Balance */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
 	font-size: 14px;
@@ -897,7 +889,6 @@ QWidget .QFrame#frameBalances .QLabel#labelImmature { /* Immature Balance */
 QWidget .QFrame#frameBalances .QLabel#labelWatchPending, /* Watch-only Pending Balance */
 QWidget .QFrame#frameBalances .QLabel#labelWatchImmature, /* Watch-only Immature Balance */
 QWidget .QFrame#frameBalances .QLabel#labelWatchAvailable, /* Watch-only Balance */
-QWidget .QFrame#frameBalances .QLabel#labelWatchLocked, /* Watch-only Locked Balance */
 QWidget .QFrame#frameBalances .QLabel#labelWatchonly, /* Watch-only Header */
 QWidget .QFrame#frameBalances .QLabel#labelSpendable { /* Spendable Header */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
@@ -908,8 +899,7 @@ QWidget .QFrame#frameBalances .QLabel#labelSpendable { /* Spendable Header */
 QWidget .QFrame#frameBalances .QLabel#labelImmatureText, /* Immature Balance Label */
 QWidget .QFrame#frameBalances .QLabel#labelTotalText, /* Total Balance Label */
 QWidget .QFrame#frameBalances .QLabel#labelPendingText, /* Pending Balance Label */
-QWidget .QFrame#frameBalances .QLabel#labelAvailableText, /* Available Balance Label */
-QWidget .QFrame#frameBalances .QLabel#labelLockedText, /* Locked Balance Label */
+QWidget .QFrame#frameBalances .QLabel#labelBalanceText, /* Available Balance Label */
 QWidget .QFrame#frameBalances .QLabel#labelBalances { /* AR3NA Balances Header Label */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
 	min-width: 160px;
@@ -929,14 +919,7 @@ QWidget .QFrame#frameBalances #lineBalances { /* AR3NA Balances Line separator *
 
 
 QWidget .QFrame#frameBalances .QLabel#labelTotal, /* Total Balance */
-QWidget .QFrame#frameBalances .QLabel#labelAvailable { /* Available Balance */
-	qproperty-alignment: 'AlignVCenter | AlignLeft';
-	font-size: 14px;
-	font-weight: normal;
-	color: #0f7f12;
-}
-
-QWidget .QFrame#frameBalances .QLabel#labelLocked { /* Locked Balance */
+QWidget .QFrame#frameBalances .QLabel#labelBalance { /* Available Balance */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
 	font-size: 14px;
 	font-weight: normal;
@@ -958,13 +941,13 @@ QWidget .QFrame#frame_RecentTransactions { /* Transactions Widget */
 	margin-top:0;
 }
 
-QWidget .QFrame#frame_RecentTransactions .QLabel#labelRecentTransactions { /* Recent Transactions Label */
+QWidget .QFrame#frame_RecentTransactions .QLabel#label_4 { /* Recent Transactions Label */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
 	min-width:180px;
 	background-color:transparent;
 	color:#333333;
 	font-weight:bold;
-	font-size:14px;
+	font-size:20px;
 	margin-right:5px;
 	padding-right:5px;
 }
@@ -1078,11 +1061,7 @@ QStackedWidget#SendCoinsEntry .QFrame#SendCoins > .QLabel { /* Send Coin Entry L
 /* QStackedWidget#SendCoinsEntry .QValidatedLineEdit#payTo { /* Pay To Input Field */
 /* QStackedWidget#SendCoinsEntry .QValidatedLineEdit#payTo:!focus { /* Pay To Input Field */
 
-QStackedWidget#SendCoinsEntry .QToolButton, /* General Settings for Pay To Icons */
-QDialog#Bip38ToolDialog .QToolButton,
-QDialog#MultiSendDialog .QToolButton,
-QDialog#SignVerifyMessageDialog .QToolButton,
-QDialog#MultisigDialog .QToolButton {
+QStackedWidget#SendCoinsEntry .QToolButton { /* General Settings for Pay To Icons */
 	background-color: #0f7f12;
 	border-width: 1px;
 	border-style: outset;
@@ -1094,25 +1073,14 @@ QDialog#MultisigDialog .QToolButton {
 	margin: 2px;
 }
 
-QStackedWidget#SendCoinsEntry .QToolButton:hover, /* General Settings for Pay To Icons */
-QDialog#Bip38ToolDialog .QToolButton:hover,
-QDialog#MultiSendDialog .QToolButton:hover,
-QDialog#SignVerifyMessageDialog .QToolButton:hover {
+QStackedWidget#SendCoinsEntry .QToolButton:hover { /* General Settings for Pay To Icons */
 	background-color: #219C21;
 }
 
-QStackedWidget#SendCoinsEntry .QToolButton:focus,  /* General Settings for Pay To Icons */
-QDialog#Bip38ToolDialog .QToolButton:focus,
-QDialog#MultiSendDialog .QToolButton:focus,
-QDialog#SignVerifyMessageDialog .QToolButton:focus,
-QDialog#MultisigDialog .QToolButton:hover {
+QStackedWidget#SendCoinsEntry .QToolButton:focus { /* General Settings for Pay To Icons */
 }
 
-QStackedWidget#SendCoinsEntry .QToolButton:pressed, /* General Settings for Pay To Icons */
-QDialog#Bip38ToolDialog .QToolButton:pressed,
-QDialog#MultiSendDialog .QToolButton:pressed,
-QDialog#SignVerifyMessageDialog .QToolButton:pressed,
-QDialog#MultisigDialog .QToolButton:pressed {
+QStackedWidget#SendCoinsEntry .QToolButton:pressed { /* General Settings for Pay To Icons */
 }
 
 /* QStackedWidget#SendCoinsEntry .QToolButton#addressBookButton { /* Address Book Button */

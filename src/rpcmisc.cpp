@@ -55,7 +55,7 @@ UniValue getinfo(const UniValue& params, bool fHelp)
             "  \"version\": xxxxx,           (numeric) the server version\n"
             "  \"protocolversion\": xxxxx,   (numeric) the protocol version\n"
             "  \"walletversion\": xxxxx,     (numeric) the wallet version\n"
-            "  \"balance\": xxxxxxx,         (numeric) the total arena balance of the wallet\n"
+            "  \"balance\": xxxxxxx,         (numeric) the total ar3na balance of the wallet\n"
             "  \"blocks\": xxxxxx,           (numeric) the current number of blocks processed in the server\n"
             "  \"timeoffset\": xxxxx,        (numeric) the time offset\n"
             "  \"connections\": xxxxx,       (numeric) the number of connections\n"
@@ -66,25 +66,18 @@ UniValue getinfo(const UniValue& params, bool fHelp)
             "  \"keypoololdest\": xxxxxx,    (numeric) the timestamp (seconds since GMT epoch) of the oldest pre-generated key in the key pool\n"
             "  \"keypoolsize\": xxxx,        (numeric) how many new keys are pre-generated\n"
             "  \"unlocked_until\": ttt,      (numeric) the timestamp in seconds since epoch (midnight Jan 1 1970 GMT) that the wallet is unlocked for transfers, or 0 if the wallet is locked\n"
-            "  \"paytxfee\": x.xxxx,         (numeric) the transaction fee set in bitg/kb\n"
-            "  \"relayfee\": x.xxxx,         (numeric) minimum relay fee for non-free transactions in bitg/kb\n"
+            "  \"paytxfee\": x.xxxx,         (numeric) the transaction fee set in ar3na/kb\n"
+            "  \"relayfee\": x.xxxx,         (numeric) minimum relay fee for non-free transactions in ar3na/kb\n"
             "  \"staking status\": true|false,  (boolean) if the wallet is staking or not\n"
             "  \"errors\": \"...\"           (string) any error messages\n"
             "}\n"
             "\nExamples:\n" +
             HelpExampleCli("getinfo", "") + HelpExampleRpc("getinfo", ""));
 
-    UniValue obj(UniValue::VOBJ);
-
-    // During inital block verification chainActive.Tip() might be not yet initialized
-    if (chainActive.Tip() == NULL) {
-        obj.push_back(Pair("status", "Blockchain information not yet available"));
-        return obj;
-    }
-
     proxyType proxy;
     GetProxy(NET_IPV4, proxy);
 
+    UniValue obj(UniValue::VOBJ);
     obj.push_back(Pair("version", CLIENT_VERSION));
     obj.push_back(Pair("protocolversion", PROTOCOL_VERSION));
 #ifdef ENABLE_WALLET
@@ -150,8 +143,6 @@ UniValue mnsync(const UniValue& params, bool fHelp)
             "  \"countMasternodeWinner\": n,    (numeric) Number of MN winner messages (local)\n"
             "  \"countBudgetItemProp\": n,      (numeric) Number of MN budget messages (local)\n"
             "  \"countBudgetItemFin\": n,       (numeric) Number of MN budget finalization messages (local)\n"
-            "  \"sumCommunityItemProp\": n,        (numeric) Number of MN community messages (total)\n"
-            "  \"countCommunityItemProp\": n,      (numeric) Number of MN community messages (local)\n"
             "  \"RequestedMasternodeAssets\": n, (numeric) Status code of last sync phase\n"
             "  \"RequestedMasternodeAttempt\": n, (numeric) Status code of last sync attempt\n"
             "}\n"
@@ -179,8 +170,6 @@ UniValue mnsync(const UniValue& params, bool fHelp)
         obj.push_back(Pair("countMasternodeWinner", masternodeSync.countMasternodeWinner));
         obj.push_back(Pair("countBudgetItemProp", masternodeSync.countBudgetItemProp));
         obj.push_back(Pair("countBudgetItemFin", masternodeSync.countBudgetItemFin));
-        obj.push_back(Pair("sumCommunityItemProp", masternodeSync.sumCommunityItemProp));
-        obj.push_back(Pair("countCommunityItemProp", masternodeSync.countCommunityItemProp));
         obj.push_back(Pair("RequestedMasternodeAssets", masternodeSync.RequestedMasternodeAssets));
         obj.push_back(Pair("RequestedMasternodeAttempt", masternodeSync.RequestedMasternodeAttempt));
 
@@ -288,14 +277,14 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "validateaddress \"bitgaddress\"\n"
-            "\nReturn information about the given bitg address.\n"
+            "validateaddress \"ar3naaddress\"\n"
+            "\nReturn information about the given ar3na address.\n"
             "\nArguments:\n"
-            "1. \"bitgaddress\"     (string, required) The bitg address to validate\n"
+            "1. \"ar3naaddress\"     (string, required) The ar3na address to validate\n"
             "\nResult:\n"
             "{\n"
             "  \"isvalid\" : true|false,         (boolean) If the address is valid or not. If not, this is the only property returned.\n"
-            "  \"address\" : \"bitgaddress\", (string) The bitg address validated\n"
+            "  \"address\" : \"ar3naaddress\", (string) The ar3na address validated\n"
             "  \"ismine\" : true|false,          (boolean) If the address is yours or not\n"
             "  \"isscript\" : true|false,        (boolean) If the key is a script\n"
             "  \"pubkey\" : \"publickeyhex\",    (string) The hex value of the raw public key\n"
@@ -398,9 +387,9 @@ UniValue createmultisig(const UniValue& params, bool fHelp)
 
                      "\nArguments:\n"
                      "1. nrequired      (numeric, required) The number of required signatures out of the n keys or addresses.\n"
-                     "2. \"keys\"       (string, required) A json array of keys which are bitg addresses or hex-encoded public keys\n"
+                     "2. \"keys\"       (string, required) A json array of keys which are ar3na addresses or hex-encoded public keys\n"
                      "     [\n"
-                     "       \"key\"    (string) bitg address or hex-encoded public key\n"
+                     "       \"key\"    (string) ar3na address or hex-encoded public key\n"
                      "       ,...\n"
                      "     ]\n"
 
@@ -433,10 +422,10 @@ UniValue verifymessage(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 3)
         throw runtime_error(
-            "verifymessage \"bitgaddress\" \"signature\" \"message\"\n"
+            "verifymessage \"ar3naaddress\" \"signature\" \"message\"\n"
             "\nVerify a signed message\n"
             "\nArguments:\n"
-            "1. \"bitgaddress\"  (string, required) The bitg address to use for the signature.\n"
+            "1. \"ar3naaddress\"  (string, required) The ar3na address to use for the signature.\n"
             "2. \"signature\"       (string, required) The signature provided by the signer in base 64 encoding (see signmessage).\n"
             "3. \"message\"         (string, required) The message that was signed.\n"
             "\nResult:\n"

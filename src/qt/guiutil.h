@@ -1,6 +1,4 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
-// Copyright (c) 2017-2018 The PIVX developers
-// Copyright (c) 2017-2018 The Arena developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -32,7 +30,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the Arena Qt UI.
+/** Utility functions used by the Ar3na Qt UI.
  */
 namespace GUIUtil
 {
@@ -47,7 +45,7 @@ QFont bitcoinAddressFont();
 void setupAddressWidget(QValidatedLineEdit* widget, QWidget* parent);
 void setupAmountWidget(QLineEdit* widget, QWidget* parent);
 
-// Parse "arena:" URI into recipient object, return true on successful parsing
+// Parse "ar3na:" URI into recipient object, return true on successful parsing
 bool parseBitcoinURI(const QUrl& uri, SendCoinsRecipient* out);
 bool parseBitcoinURI(QString uri, SendCoinsRecipient* out);
 QString formatBitcoinURI(const SendCoinsRecipient& info);
@@ -105,7 +103,7 @@ bool isObscured(QWidget* w);
 // Open debug.log
 void openDebugLogfile();
 
-// Open arena.conf
+// Open ar3na.conf
 void openConfigfile();
 
 // Open masternode.conf
@@ -215,18 +213,19 @@ QString formatServicesStr(quint64 mask);
 /* Format a CNodeCombinedStats.dPingTime into a user-readable string or display N/A, if 0*/
 QString formatPingTime(double dPingTime);
 
-#if defined(Q_OS_MAC)
-    // workaround for Qt OSX Bug:
-    // https://bugreports.qt-project.org/browse/QTBUG-15631
-    // QProgressBar uses around 10% CPU even when app is in background
-    class ProgressBar : public QProgressBar
+#if defined(Q_OS_MAC) && QT_VERSION >= 0x050000
+// workaround for Qt OSX Bug:
+// https://bugreports.qt-project.org/browse/QTBUG-15631
+// QProgressBar uses around 10% CPU even when app is in background
+class ProgressBar : public QProgressBar
+{
+    bool event(QEvent* e)
     {
-        bool event(QEvent *e) {
-            return (e->type() != QEvent::StyleAnimationUpdate) ? QProgressBar::event(e) : false;
-        }
-    };
+        return (e->type() != QEvent::StyleAnimationUpdate) ? QProgressBar::event(e) : false;
+    }
+};
 #else
-    typedef QProgressBar ProgressBar;
+typedef QProgressBar ProgressBar;
 #endif
 
 } // namespace GUIUtil

@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: arenad.service
-Upstart: arenad.conf
-OpenRC:  arenad.openrc
-         arenad.openrcconf
-CentOS:  arenad.init
+SystemD: ar3nad.service
+Upstart: ar3nad.conf
+OpenRC:  ar3nad.openrc
+         ar3nad.openrcconf
+CentOS:  ar3nad.init
 
 have been made available to assist packagers in creating node packages here.
 
