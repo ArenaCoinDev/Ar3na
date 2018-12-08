@@ -107,7 +107,7 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Ar3na: 1 day
-        nTargetSpacing = 1 * 60;  // Ar3na: 1 minutes
+        nTargetSpacing = 2 * 60;  // Ar3na: 1 minutes
         nMaturity = 10;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 21000000 * COIN;
