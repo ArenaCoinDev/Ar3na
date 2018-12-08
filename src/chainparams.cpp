@@ -155,6 +155,8 @@ public:
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("202.182.127.31", "202.182.127.31"));
         vSeeds.push_back(CDNSSeedData("167.179.92.230", "167.179.92.230"));
+        vSeeds.push_back(CDNSSeedData("198.13.61.140", "198.13.61.140"));
+        vSeeds.push_back(CDNSSeedData("202.182.117.76", "202.182.117.76"));
 
         // Ar3na addresses start with 'G'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 23);
